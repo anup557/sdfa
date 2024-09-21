@@ -1,0 +1,2892 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/css/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Papers updated in last 7 days</title>
+    <link rel="stylesheet" href="/css/eprint.css?v=10">
+    
+
+<meta name="robots" content="noindex,nofollow" />
+<style>
+    div.summaryauthors {
+      font-style: italic;
+    }
+    a.abstract-open:after {
+      content:' -';
+      font-weight: 800;
+    }
+    a.abstract-closed:after {
+      content: " ›";
+      font-weight: 800;
+    }
+    .paper-abstract {
+      max-height: 0;
+      overflow-y: hidden;
+      transition: max-height 0.2s ease-out;
+      white-space: pre-wrap;
+    }
+</style>
+  <script>
+    function toggleAbstract(elem) {
+      console.dir(elem);
+      let target = document.getElementById(elem.dataset.target);
+      if (target.style.maxHeight) {
+        target.style.maxHeight = null;
+        elem.text = 'Show abstract';
+        elem.classList.add('abstract-closed');
+        elem.classList.remove('abstract-open');
+      } else {
+        target.style.maxHeight = target.scrollHeight + "px";
+        elem.text = 'Hide abstract';
+        elem.classList.remove('abstract-closed');
+        elem.classList.add('abstract-open');
+      }
+    }
+   MathJax = {
+     tex: {
+       inlineMath: [['$', '$'], ['\\(', '\\)']],
+       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+       processEnvironments: false
+     }
+   };
+  </script>
+  <!-- we do not use a CDN. MathJax is too dangerous. -->
+  <script type="text/javascript" id="MathJax-script" async
+          src="/js/mathjax/tex-chtml.js">
+  </script>
+
+  </head>
+
+  <body>
+    <noscript>
+      <h1 class="text-center">What a lovely hat</h1>
+      <h4 class="text-center">Is it made out of <a href="https://iacr.org/tinfoil.html">tin foil</a>?</h4>
+    </noscript>
+    <div class="fixed-top" id="topNavbar">
+      <nav class="navbar navbar-custom navbar-expand-lg">
+        <div class="container px-0 justify-content-between justify-content-lg-evenly">
+          <div class="order-0 align-items-center d-flex">
+            <button class="navbar-toggler btnNoOutline" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+              <span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+            </button>
+            <a class="d-none me-5 d-lg-inline" href="https://iacr.org/"><img class="iacrlogo" src="/img/iacrlogo_small.png" alt="IACR Logo" style="max-width:6rem;"></a>
+          </div>
+          <a class="ePrintname order-1" href="/">
+            <span class="longNavName">Cryptology ePrint Archive</span>
+          </a>
+          <div class="collapse navbar-collapse order-3" id="navbarContent">
+            <ul class="navbar-nav me-auto ms-2 mb-2 mb-lg-0 justify-content-end w-100">
+              <li class="ps-md-3 nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Papers
+                </a>
+                <ul class="dropdown-menu me-3" aria-labelledby="navbarDropdown">
+                  <span class="text-dark mx-3" style="white-space:nowrap;">Updates from the last:</span>
+                  <li><a class="dropdown-item ps-custom" href="/days/7">7 days</a></li>
+                  <li><a class="dropdown-item ps-custom" href="/days/31">31 days</a></li>
+                  <li><a class="dropdown-item ps-custom" href="/days/183">6 months</a></li>
+                  <li><a class="dropdown-item ps-custom" href="/days/365">365 days</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/byyear">Listing by year</a></li>
+                  <li><a class="dropdown-item" href="/complete">All papers</a></li>
+                  <li><a class="dropdown-item" href="/complete/compact">Compact view</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/citation.html">How to cite</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/rss">Harvesting metadata</a></li>
+                </ul>
+              </li>
+              <li class="ps-md-3 nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="submissionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Submissions
+                </a>
+                <ul class="dropdown-menu me-3" aria-labelledby="submissionsDropdown">
+                  <li><a class="dropdown-item" href="/submit">Submit a paper</a></li>
+                  <li><a class="dropdown-item" href="/revise">Revise or withdraw a paper</a></li>
+                  <li><a class="dropdown-item" href="/operations.html">Acceptance and publishing conditions</a></li>
+                </ul>
+              </li>
+              <li class="ps-md-3 nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul class="dropdown-menu me-3" aria-labelledby="aboutDropdown">
+                  <li><a class="dropdown-item" href="/about.html">Goals and history</a></li>
+                  <li><a class="dropdown-item" href="/news.html">News</a></li>
+                  <li><a class="dropdown-item" href="/stats">Statistics</a></li>
+                  <li><a class="dropdown-item" href="/contact.html">Contact</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown ps-md-2 text-right order-2 order-lg-last">
+            <button class="btn btnNoOutline" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/img/search.svg" class="searchIcon" alt="Search Button"/>
+            </button>
+            <div id="searchDd" class="dropdown-menu dropdown-menu-end p-0" aria-labelledby="dropdownMenuButton1">
+              <form action="/search" method="GET">
+                <div class="input-group">
+                  <input id="searchbox" name="q" type="search" class="form-control" autocomplete="off">
+                  <button class="btn btn-secondary border input-group-append ml-2">
+                    Search
+                  </button>
+                </div>
+              </form>
+              <div class="ms-2 p-1 d-none"><a href="/search">Advanced search</a></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <main id="eprintContent" class="container px-3 py-4 p-md-4">
+
+
+
+
+
+<script>
+ function scrollToTop() {
+   window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+  <h2 class="mt-2 mb-3 px-1 px-lg-4">Papers updated in last 7 days (70 results)</h2>
+<div id="scrollButtons" style="position:sticky;height:30px;top:90vh;left:25%">
+  <div id="buttonContainer" class="d-none d-md-block">
+    <img src="/img/arrow-up-circle-outline.svg" style="height:30px;width:30px;" title="Scroll to top" onclick="scrollToTop()">
+  </div>
+</div>
+<div class="paperList ms-lg-4 me-lg-4">
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/604">2023/604</a>
+      <a class="ms-2" href="/2023/604.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-09</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Pushing the Limit of Vectorized Polynomial Multiplication for NTRU Prime</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Vincent Hwang</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-604" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-604" class="paper-abstract">This paper implements a vectorized polynomial multiplication for the NTRU Prime parameter sets ntrulpr761/sntrup761 with AVX2. We explore various fast Fourier transformations (FFTs) for multiplying polynomials in $\mathbb{Z}_{4591}[x]/ \left\langle x^{761} − x − 1 \right\rangle$. The polynomial ring $\mathbb{Z}_{4591}[x]/ \left\langle x^{761} − x − 1 \right\rangle$ is a finite field and does not enjoy common beliefs on friendliness measure for implementations. Commonly, people believe that radix-2 Cooley–Tukey FFT and other FFTs with the same definibality ($2k |(q − 1)$ for the coefficient ring $\mathbb{Z}_q$ with prime $q$) are fast and easy to vectorization. We show that this belief should be extended to include the following: (i) Bruun’s FFT exploiting the power-of-two factor of $q + 1$ if $q \equiv 3 \bmod 4$; (ii) truncated Rader’s FFT exploiting the prime factor of $q − 1$. We qualify the prime $4591$ as FFT and vectorization-friendly and find that most NTRU Prime parameter sets enjoy friendliness measures. Compared to the state-of-the-art AVX2-optimized implementation by [Bernstein, Brumley, Chen, and Tuveri, USENIX Security 2022], our big-by-big polynomial multiplication is 1.99× and 2.16× faster on Haswell and Skylake, respectively. We port our implementation to the scheme sntrup761. For the batch key generation with batch size 32, we reduce the amortized cost by 12% on Haswell and 8% on Skylake. For encapsulation, we reduce the performance cycles by 7% on Haswell and 10% on Skylake. Finally, for the decapsulation, we reduce the performance cycles by 10% on Haswell and 13% on Skylake.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2015/477">2015/477</a>
+      <a class="ms-2" href="/2015/477.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-09</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Authentication Key Recovery on Galois Counter Mode (GCM)</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=SECRETKEY"><small class="badge category category-SECRETKEY">Secret-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">John Mattsson and Magnus Westerlund</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2015-477" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=SECRETKEY"><small class="badge category category-SECRETKEY">Secret-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2015-477" class="paper-abstract">GCM is used in a vast amount of security protocols and is quickly becoming the de facto mode of operation for block ciphers due to its exceptional performance. In this paper we analyze the NIST stan- dardized version (SP 800-38D) of GCM, and in particular the use of short tag lengths. We show that feedback of successful or unsuccessful forgery attempt is almost always possible, contradicting the NIST assumptions for short tags. We also provide a complexity estimation of Ferguson’s authentication key recovery method on short tags, and suggest several novel improvements to Fergusons’s attacks that significantly reduce the security level for short tags. We show that for many truncated tag sizes; the security levels are far below, not only the current NIST requirement of 112-bit security, but also the old NIST requirement of 80-bit security. We therefore strongly recommend NIST to revise SP 800-38D.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/679">2023/679</a>
+      <a class="ms-2" href="/2023/679.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-09</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">ParBFT: Faster Asynchronous BFT Consensus with a Parallel Optimistic Path</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Xiaohai Dai, Bolin Zhang, Hai Jin, and Ling Ren</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-679" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-679" class="paper-abstract">To reduce latency and communication overhead of asynchronous Byzantine Fault Tolerance (BFT) consensus, an optimistic path is often added, with Ditto and BDT as state-of-the-art representatives. These protocols first attempt to run an optimistic path that is typically adapted from partially-synchronous BFT and promises good performance in good situations.  If the optimistic path fails to make progress, these protocols switch to a pessimistic path after a timeout, to guarantee liveness in an asynchronous network. This design crucially relies on an accurate estimation of the network delay Δ to set the timeout parameter correctly. A wrong estimation of Δ can lead to either premature or delayed switching to the pessimistic path, hurting the protocol&#39;s efficiency in both cases.
+
+To address the above issue, we propose ParBFT, which employs a parallel optimistic path. As long as the leader of the optimistic path is non-faulty, ParBFT ensures low latency without requiring an accurate estimation of the network delay. We propose two variants of ParBFT, namely ParBFT1 and ParBFT2, with a trade-off between latency and communication. ParBFT1 simultaneously launches the two paths, achieves lower latency under a faulty leader, but has a quadratic message complexity even in good situations. ParBFT2 reduces the message complexity in good situations by delaying the pessimistic path, at the cost of a higher latency under a faulty leader. Experimental results demonstrate that ParBFT outperforms Ditto or BDT. In particular, when the network condition is bad, ParBFT can reach consensus through the optimistic path, while Ditto and BDT suffer from path switching and have to make progress using the pessimistic path.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1175">2023/1175</a>
+      <a class="ms-2" href="/2023/1175.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Fast batched asynchronous distributed key generation</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Jens Groth and Victor Shoup</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1175" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1175" class="paper-abstract">We present new protocols for threshold Schnorr signatures that work in an asynchronous communication setting, providing robustness and optimal resilience.  These protocols provide unprecedented performance in terms of communication and computational complexity.  In terms of communication complexity, for each signature, a single party must transmit a few dozen group elements and scalars across the network (independent of the size of the signing committee).  In terms of computational complexity, the amortized cost for one party to generate a signature is actually less than that of just running the standard Schnorr signing or verification algorithm (at least for moderately sized signing committees, say, up to 100).
+
+For example, we estimate that with a signing committee of 49 parties, at most 16 of which are corrupt, we can generate 50,000 Schnorr signatures per second (assuming each party can dedicate one standard CPU core  and 500Mbs of network bandwidth to signing).  Importantly, this estimate includes both the cost of an offline precomputation phase (which just churns out message independent &#34;presignatures&#34;) and an online signature generation phase.  Also, the online signing phase can generate a signature with very little network latency (just one to three rounds, depending on how throughput and latency are balanced).
+
+To achieve this result, we provide two new innovations.  One is a new secret sharing protocol (again, asynchronous, robust, optimally resilient) that allows the dealer to securely distribute shares of a large batch of ephemeral secret keys, and to publish the corresponding ephemeral public keys.  To achieve better performance, our protocol minimizes public-key operations, and in particular, is based on a novel technique that does not use the traditional technique based on &#34;polynomial commitments&#34;.  The second innovation is a new algorithm to efficiently combine ephemeral public keys contributed by different parties (some possibly corrupt) into a smaller number of secure ephemeral public keys.  This new algorithm is based on a novel construction of a so-called &#34;super-invertible matrix&#34; along with a corresponding highly-efficient algorithm for multiplying this matrix by a vector of group elements.
+
+As protocols for verifiably sharing a secret key with an associated public key and the technology of super-invertible matrices both play a major role in threshold cryptography and multi-party computation, our two new innovations should have applicability well beyond that of threshold Schnorr signatures.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1256">2023/1256</a>
+      <a class="ms-2" href="/2023/1256.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">On Soundness Notions for Interactive Oracle Proofs</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Alexander R. Block, Albert Garreta, Pratyush Ranjan Tiwari, and Michał Zając</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1256" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1256" class="paper-abstract">Interactive oracle proofs (IOPs) (Ben-Sasson et al., TCC 2016; Reingold et al., SICOMP 2021) have emerged as a powerful model for proof systems combining IP and PCP. While IOPs are not any more powerful than PCPs from a complexity theory perspective, their potential to create succinct proofs and arguments has been demonstrated by many recent constructions achieving better parameters such as total proof length, alphabet size, and query complexity. In this work, we establish new results on the relationship between various notions of soundness for IOPs. First, we formally generalize the notion of round-by-round soundness (Canetti et al., STOC 2019) and round-by-round knowledge soundness (Chiesa et al., TCC 2019). Given this generalization, we then examine its relationship to the notions of generalized special soundness (Attema et al., CRYPTO 2021) and generalized special unsoundness (Attema et al., TCC 2022). We show that: 
+1. generalized special soundness implies generalized round-by-round soundness; 
+2. generalized round-by-round knowledge soundness implies generalized special soundness; 
+3. generalized special soundness does not imply generalized round-by-round knowledge soundness; 
+4. generalized round-by-round soundness (resp., special unsoundness) is an upper bound (resp., a lower bound) on standard soundness, and this relationship is tight when the round-by-round soundness and special unsoundness errors are equal; and
+5. any special sound IOP can be transformed via (a variant of) the Fiat-Shamir transformation (in the Random Oracle Model) into a non-interactive proof that is adaptively sound in the Quantum Random Oracle Model.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1315">2023/1315</a>
+      <a class="ms-2" href="/2023/1315.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">LedgerLocks: A Security Framework for Blockchain Protocols Based on Adaptor Signatures</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Erkan Tairi, Pedro Moreno-Sanchez, and Clara Schneidewind</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1315" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1315" class="paper-abstract">The scalability and interoperability challenges in current cryptocurrencies have motivated the design of cryptographic protocols that enable efficient applications on top and across widely used cryptocurrencies such as Bitcoin or Ethereum. Examples of such protocols include (virtual) payment channels, atomic swaps, oracle-based contracts, deterministic wallets, and coin mixing services. Many of these protocols are built upon minimal core functionalities supported by a wide range of cryptocurrencies. Most prominently, adaptor signatures (AS) have emerged as a powerful tool for constructing blockchain protocols that are (mostly) agnostic to the specific logic of the underlying cryptocurrency. Even though AS-based protocols are built upon the same cryptographic principles, there exists no modular and faithful way for reasoning about their security. Instead, all the works analyzing such protocols focus on reproving how adaptor signatures are used to cryptographically link transactions while considering highly simplified blockchain models that do not capture security-relevant aspects of transaction execution in blockchain-based consensus.
+
+To help this, we present LedgerLocks, a framework for the secure design of AS-based blockchain applications in the presence of a realistic blockchain. LedgerLocks defines the concept of AS-locked transactions, transactions whose publication is bound to the knowledge of a cryptographic secret. We argue that AS-locked transactions are the common building block of AS-based blockchain protocols and we define $\mathcal{G}_{\mathsf{LedgerLocks}}$, a realistic ledger model in the Universal Composability framework with built-in support for AS-locked transactions. As LedgerLocks abstracts from the cryptographic realization of AS-locked transactions, it allows protocol designers to focus on the blockchain-specific security considerations instead.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1335">2023/1335</a>
+      <a class="ms-2" href="/2023/1335.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Antrag: Annular NTRU Trapdoor Generation</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Thomas Espitau, Thi Thu Quyen Nguyen, Chao Sun, Mehdi Tibouchi, and Alexandre Wallet</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1335" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1335" class="paper-abstract">In this paper, we introduce a novel trapdoor generation technique for
+  Prest&#39;s hybrid sampler over NTRU lattices. Prest&#39;s sampler is used in
+  particular in the recently proposed Mitaka signature scheme
+  (Eurocrypt 2022), a variant of the Falcon signature scheme, one of the
+  candidates selected by NIST for standardization. Mitaka was introduced
+  to address Falcon&#39;s main drawback, namely the fact that the lattice
+  Gaussian sampler used in its signature generation is highly complex,
+  difficult to implement correctly, to parallelize or protect against
+  side-channels, and to instantiate over rings of dimension not a power of
+  two to reach intermediate security levels. Prest&#39;s sampler is
+  considerably simpler and solves these various issues, but when applying
+  the same trapdoor generation approach as Falcon, the resulting
+  signatures have far lower security in equal dimension. The Mitaka
+  paper showed how certain randomness-recycling techniques could be used to
+  mitigate this security loss, but the resulting scheme is still
+  substantially less secure by Falcon (by around 20 to 50 bits of
+  CoreSVP security depending on the parameters), and has much slower key
+  generation.
+
+  Our new trapdoor generation techniques solves all of those issues
+  satisfactorily: it gives rise to a much simpler and faster key generation
+  algorithm than Mitaka&#39;s (achieving similar speeds to Falcon), and is
+  able to comfortably generate trapdoors reaching the same NIST security
+  levels as Falcon as well. It can also be easily adapted to rings of
+  intermediate dimensions, in order to support the same versatility as
+  Mitaka in terms of parameter selection. All in all, this new
+  technique combines all the advantages of both Falcon and Mitaka
+  (and more) with none of the drawbacks.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/791">2022/791</a>
+      <a class="ms-2" href="/2022/791.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">log*-Round Game-Theoretically-Fair Leader Election</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Ilan Komargodski, Shin’ichiro Matsuo, Elaine Shi, and Ke Wu</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-791" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-791" class="paper-abstract">It is well-known that in the presence of majority coalitions, strongly fair coin toss is impossible. A line of recent works have shown that by relaxing the fairness notion to game theoretic, we can overcome this classical lower bound. In particular,  Chung et al. (CRYPTO&#39;21) showed how to achieve approximately (game-theoretically) fair leader election in the presence of majority coalitions, with round complexity as small as $O(\log \log n)$ rounds.
+
+In this paper, we revisit the round complexity of game-theoretically fair leader election. We construct $O(\log^* n)$ rounds leader election protocols that achieve $(1-o(1))$-approximate fairness in the presence of $(1-O(1)) n$-sized coalitions. Our protocols achieve the same round-fairness trade-offs as Chung et al.&#39;s and have the advantage of being conceptually simpler. Finally, we also obtain game-theoretically fair protocols for committee election which might be of independent interest.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/283">2023/283</a>
+      <a class="ms-2" href="/2023/283.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Maximizing Miner Revenue in Transaction Fee Mechanism Design</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Ke Wu, Elaine Shi, and Hao Chung</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-283" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-283" class="paper-abstract">Transaction fee mechanism design is a new decentralized mechanism design problem where users bid for space on the blockchain. Several recent works showed that the transaction fee mechanism design fundamentally departs from classical mechanism design. They then systematically explored the mathematical landscape of this new decentralized mechanism design problem in two settings: in the plain setting where no cryptography is employed, and in a cryptography-assisted setting where the rules of the mechanism are enforced by a multi-party computation protocol. Unfortunately, in both settings, prior works showed that if we want the mechanism to incentivize honest behavior for both users as well as miners (possibly colluding with users), then the miner revenue has to be zero. Although adopting a relaxed, approximate notion of incentive compatibility gets around this zero miner-revenue limitation, the scaling of the miner revenue is nonetheless poor.
+
+In this paper, we show that if we make a mildly stronger reasonable-world assumption than prior works, we can circumvent the known limitations on miner revenue, and design auctions that generate optimal miner revenue. We also systematically explore the mathematical landscape of transaction fee mechanism design under the new reasonable-world and demonstrate how such assumptions can alter the feasibility and infeasibility landscape.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/957">2023/957</a>
+      <a class="ms-2" href="/2023/957.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">BASS: Boolean Automorphisms Signature Scheme</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Dima Grigoriev, Ilia Ilmer, Alexey Ovchinnikov, and Vladimir Shpilrain</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-957" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-957" class="paper-abstract">We offer a digital signature scheme using Boolean automorphisms of a multivariate  polynomial algebra over integers. Verification part of this scheme is based on the approximation of the number of zeros of a multivariate Boolean function.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/1339">2022/1339</a>
+      <a class="ms-2" href="/2022/1339.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">CCA-1 Secure Updatable Encryption with Adaptive Security</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Huanhuan Chen, Yao Jiang Galteland, and Kaitai Liang</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-1339" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-1339" class="paper-abstract">Updatable encryption (UE) enables a cloud server to update ciphertexts using client-generated tokens. There are two types of UE: ciphertext-independent (c-i) and ciphertext-dependent (c-d). In terms of construction and efficiency, c-i UE utilizes a single token to update all ciphertexts. The update mechanism relies mainly on the homomorphic properties of exponentiation, which limits the efficiency of encryption and updating. Although c-d UE may seem inconvenient as it requires downloading parts of the ciphertexts during token generation, it allows for easy implementation of the Dec-then-Enc structure. This methodology significantly simplifies the construction of the update mechanism. Notably, the c-d UE scheme proposed by Boneh et al. (ASIACRYPT’20) has been reported to be 200 times faster than prior UE schemes based on DDH hardness, which is the case for most existing c-i UE schemes. Furthermore, c-d UE ensures a high level of security as the token does not reveal any information about the key, which is difficult for c-i UE to achieve. However, previous security studies on c-d UE only addressed selective security; the studies for adaptive security remain an open problem.
+
+In this study, we make three significant contributions to ciphertextdependent updatable encryption (c-d UE). Firstly, we provide stronger security notions compared to previous work, which capture adaptive security and also consider the adversary’s decryption capabilities under the adaptive corruption setting. Secondly, we propose a new c-d UE scheme that achieves the proposed security notions. The token generation technique significantly differs from the previous Dec-then-Enc structure, while still preventing key leakages. At last, we introduce a packing technique that enables the simultaneous encryption and updating of multiple messages within a single ciphertext. This technique helps alleviate the cost of c-d UE by reducing the need to download partial ciphertexts during token generation.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1342">2023/1342</a>
+      <a class="ms-2" href="/2023/1342.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Modular Sumcheck Proofs with Applications to Machine Learning and Image Processing</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">David Balbás, Dario Fiore, Maria Isabel González Vasco, Damien Robissout, and Claudio Soriente</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1342" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1342" class="paper-abstract">Cryptographic proof systems provide integrity, fairness, and privacy in applications that outsource data processing tasks. However, general-purpose proof systems do not scale well to large inputs. At the same time, ad-hoc solutions for concrete applications - e.g., machine learning or image processing - are more efficient but lack modularity, hence they are hard to extend or to compose with other tools of a data-processing pipeline. 
+
+In this paper, we combine the performance of tailored solutions with the versatility of general-purpose proof systems. We do so by introducing a modular framework for verifiable computation of sequential operations. The main tool of our framework is a new information-theoretic primitive called Verifiable Evaluation Scheme on Fingerprinted Data (VE) that captures the properties of diverse sumcheck-based interactive proofs, including the well-established GKR protocol. Thus, we show how to compose VEs for specific functions to obtain verifiability of a data-processing pipeline.
+
+We propose a novel VE for convolution operations that can handle multiple input-output channels and batching, and we use it in our framework to build proofs for (convolutional) neural networks and image processing. We realize a prototype implementation of our proof systems, and show that we achieve up to $5 \times$ faster proving time and $10 \times$ shorter proofs compared to the state-of-the-art, in addition to asymptotic improvements.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1341">2023/1341</a>
+      <a class="ms-2" href="/2023/1341.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Combined Private Circuits - Combined Security Refurbished</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Jakob Feldtkeller, Tim Güneysu, Thorben Moos, Jan Richter-Brockmann, Sayandeep Saha, Pascal Sasdrich, and François-Xavier Standaert</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1341" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1341" class="paper-abstract">Physical attacks are well-known threats to cryptographic implementations. While countermeasures against passive Side-Channel Analysis (SCA) and active Fault Injection Analysis (FIA) exist individually, protecting against their combination remains a significant challenge. A recent attempt at achieving joint security has been published at CCS 2022 under the name CINI-MINIS. The authors introduce relevant security notions and aim to construct arbitrary-order gadgets that remain trivially composable in the presence of a combined adversary. Yet, we show that all CINI-MINIS gadgets at any order are susceptible to a devastating attack with only a single fault and probe due to a lack of error correction modules in the compression. We explain the details of the attack, pinpoint the underlying problem in the constructions, propose an additional design principle, and provide new (fixed) provably secure and composable gadgets for arbitrary order. Luckily, the changes in the compression stage help us to save correction modules and registers elsewhere, making the resulting Combined Private Circuits (CPC) more secure and more efficient than the original ones. We also explain why the discovered flaws have been missed by the associated formal verification tool VERICA (TCHES 2022) and propose fixes to remove its blind spot. Finally, we explore alternative avenues to repair the compression stage without additional corrections based on non-completeness, i.e., constructing a compression that never recombines any secret. Yet, while this approach could have merit for low-order gadgets, it is, for now, hard to generalize and scales poorly to higher orders. We conclude that our refurbished arbitrary order CINI gadgets provide a solid foundation for further research.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1247">2023/1247</a>
+      <a class="ms-2" href="/2023/1247.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Representations of Group Actions and their Applications in Cryptography</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Giuseppe D&#39;Alconzo and Antonio J. Di Scala</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1247" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1247" class="paper-abstract">Cryptographic group actions provide a flexible framework that allows the instantiation of several primitives, ranging from key exchange protocols to PRFs and digital signatures. The security of such constructions is based on the intractability of some computational problems. For example, given the group action $(G,X,\star)$, the weak unpredictability assumption (Alamati et al., Asiacrypt 2020) requires that, given random $x_i$&#39;s in $X$, no probabilistic polynomial-time algorithm can compute, on input $\{(x_i,g\star x_i)\}_{i=1,\dots,Q}$, the group element $g$.
+In this work, we study such assumptions, aided by the definition of group action representations and a new metric, the linear dimension, that estimates the &#34;linearity&#34; of a group action, or in other words, how much it is far from being linear. 
+We show that under some hypotheses on the group action representation, and if the linear dimension is polynomial in the security parameter, then the weak unpredictability and other related assumptions cannot hold.
+This technique is applied to some actions from cryptography, like the ones arising from the equivalence of linear codes; as a result, we obtain the impossibility of using such actions for the instantiation of certain primitives.
+As an additional result, some bounds on the linear dimension are given for classical groups, such as $\mathcal{S}_n$, $\mathrm{GL}(\mathbb{F}^n)$ and the cyclic group $\mathbb{Z}_n$ acting on itself.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1340">2023/1340</a>
+      <a class="ms-2" href="/2023/1340.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Methods for Masking CRYSTALS-Kyber Against Side-Channel Attacks</div>
+      <div class="ms-3 d-none d-md-block">
+        <small class="badge category category-uncategorized">Uncategorized</small>
+      </div>
+    </div>
+    <div class="summaryauthors">Sıla ÖZEREN and Oğuz YAYLA</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1340" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      <small class="badge category category-uncategorized">Uncategorized</small>
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1340" class="paper-abstract">In the context of post-quantum secure algorithms like CRYSTALS-Kyber, the importance of protecting sensitive polynomial coefficients from side-channel attacks is increasingly recognized. Our research introduces two alternative masking methods to enhance the security of the compression function in Kyber through masking. Prior to this, the topic had been addressed by only one other research study. The &#34;Double and Check&#34; method integrates arithmetic sharing and symmetry adjustments, introducing a layer of obfuscation by determining coefficient values based on modular overflows. In contrast, the Look-Up-Table (LUT) integration method employs arithmetic-to-Boolean conversions, augmented by a pre-computed table for efficient value verifications. Furthermore, by leveraging the alternative prime 7681, we propose a novel masked compression function. This prime, 7681, is also notable as the smallest prime suitable for fast NTT multiplication. While both algorithms prioritize data protection and streamlined processing, they also underscore the inherent challenges of balancing computational speed with the potential vulnerabilities to side-channel attacks.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/855">2022/855</a>
+      <a class="ms-2" href="/2022/855.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Tightness Subtleties for Multi-user PKE Notions</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Hans Heum and Martijn Stam</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-855" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-855" class="paper-abstract">Public key encryption schemes are increasingly being studied concretely, with an emphasis on tight bounds even in a multi-user setting. Here, two types of formalization have emerged, one with a single challenge bit and one with multiple challenge bits. Another modelling choice is whether to allow key corruptions or not. How tightly the various notions relate to each other has hitherto not been studied in detail. We show that in the absence of corruptions, single-bit left-or-right indistinguishability is the preferred notion, as it tightly implies the other (corruption-less) notions. However, in the presence of corruptions, this implication no longer holds; we suggest the use of a more general notion that tightly implies both existing options. Furthermore, for completeness we study how the relationship between left-or-right versus real-or-random evolves in the multi-user PKE setting.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1339">2023/1339</a>
+      <a class="ms-2" href="/2023/1339.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-08</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">FlexiRand: Output Private (Distributed) VRFs and Application to Blockchains</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Aniket Kate, Easwar Vivek Mangipudi, Siva Mardana, and Pratyay Mukherjee</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1339" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1339" class="paper-abstract">Web3 applications based on blockchains regularly need access to randomness that is unbiased, unpredictable, and publicly verifiable. For Web3 gaming applications, this becomes a crucial selling point to attract more users by providing credibility to the &#34;random reward&#34; distribution feature. A verifiable random function (VRF) protocol satisfies these requirements naturally, and there is a tremendous rise in the use of VRF services. As most blockchains cannot maintain the secret keys required for VRFs, Web3 applications interact with external VRF services via a smart contract where a VRF output is exchanged for a fee. While this smart contract-based plain-text exchange offers the much-needed public verifiability immediately, it severely limits the way the requester can employ the VRF service: the requests cannot be made in advance, and the output cannot be reused. This introduces significant latency and monetary overhead.
+
+This work overcomes this crucial limitation of the VRF service by introducing a novel privacy primitive Output Private
+VRF ( Pri-VRF) and thereby adds significantly more flexibility to the Web3-based VRF services. We call our framework
+FlexiRand. While maintaining the pseudo-randomness and
+public verifiability properties of VRFs, FlexiRand ensures that
+the requester alone can observe the VRF output. The smart
+contract and anybody else can only observe a blinded-yet-verifiable version of the output. We formally define Pri-VRF,
+put forward a practically efficient design, and provide provable security analysis in the universal composability (UC) framework (in the random oracle model) using a variant of one-more Diffie-Hellman assumption over bilinear groups.
+
+As the VRF service, with its ownership of the secret key, be-
+comes a single point of failure, it is realized as a distributed VRF with the key secret-shared across distinct nodes in our framework. We develop our distributed Pri-VRF construction by combining approaches from Distributed VRF and Distributed Oblivious PRF literature. We provide provable security analysis (in UC), implement it and compare its performance with existing distributed VRF schemes. Our distributed Pri-VRF only introduces a minimal computation and communication overhead for the VRF service, the requester, and the contract.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/310">2023/310</a>
+      <a class="ms-2" href="/2023/310.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Ramen: Souper Fast Three-Party Computation for RAM Programs</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Lennart Braun, Mahak Pancholi, Rahul Rachuri, and Mark Simkin</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-310" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-310" class="paper-abstract">Secure RAM computation allows a number of parties to evaluate a function represented as a random-access machine (RAM) program in a way that reveals nothing about the private inputs of the parties except from what is already revealed by the function output itself. In this work we present \emph{Ramen}, which is a new protocol for computing RAM programs securely among three parties, tolerating up to one passive corruption. Ramen provides reasonable asymptotic guarantees and is concretely efficient at the same time. We have implemented our protocol and provide extensive benchmarks for various settings.
+
+Asymptotically, our protocol requires a constant number of rounds and an amortized sublinear amount of communication and computation per memory access. In terms of concrete efficiency, our protocol outperforms previous solutions. For a memory of size $2^{26}$ our memory accesses are \(25\times\) faster in the LAN and \(8\times\) faster in the WAN setting, when compared to the previously fastest, and concurrent, solution by Vadapalli, Henry, and Goldberg (USENIX Security 2023). Due to our superior asymptotic guarantees, the efficiency gap is only widening as the memory gets larger and for this reason Ramen provides the currently most scalable concretely efficient solution for securely computing RAM programs.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1338">2023/1338</a>
+      <a class="ms-2" href="/2023/1338.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Lanturn: Measuring Economic Security of Smart Contracts Through Adaptive Learning</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Kushal Babel, Mojan Javaheripi, Yan Ji, Mahimna Kelkar, Farinaz Koushanfar, and Ari Juels</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1338" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1338" class="paper-abstract">We introduce Lanturn: a general purpose adaptive learning-based framework for measuring the cryptoeconomic security of composed decentralized-finance (DeFi) smart contracts. Lanturn discovers strategies comprising of concrete transactions for extracting economic value from smart contracts interacting with a particular transaction environment. We formulate the strategy discovery as a black-box optimization problem and leverage a novel adaptive learning-based algorithm to address it.
+Lanturn features three key properties. First, it needs no contract-specific heuristics or reasoning, due to our black-box formulation of cryptoeconomic security. Second, it utilizes a simulation framework that operates natively on blockchain state and smart contract machine code, such that transactions returned by Lanturn’s learning-based optimization engine can be executed on-chain without modification. Finally, Lanturn is scalable in that it can explore strategies comprising a large number of transactions that can be reordered or subject to insertion of new transactions.
+We evaluate Lanturn on the historical data of the biggest and most active DeFi Applications: Sushiswap, UniswapV2, UniswapV3, and AaveV2. Our results show that Lanturn not only rediscovers existing, well-known strategies for extracting value from smart contracts, but also discovers new strategies that are previously undocumented. Lanturn also consistently discovers higher value than evidenced in the wild, surpassing a natural baseline computed using value extracted by bots and other strategic agents.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/473">2022/473</a>
+      <a class="ms-2" href="/2022/473.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Understanding binary-Goppa decoding</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Daniel J.  Bernstein</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-473" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-473" class="paper-abstract">This paper reviews, from bottom to top, a polynomial-time algorithm to correct t errors in classical binary Goppa codes defined by squarefree degree-t polynomials. The proof is factored through a proof of a simple Reed--Solomon decoder, and the algorithm is simpler than Patterson&#39;s algorithm. All algorithm layers are expressed as Sage scripts backed by test scripts. All theorems are formally verified. The paper also covers the use of decoding inside the Classic McEliece cryptosystem, including reliable recognition of valid inputs.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1337">2023/1337</a>
+      <a class="ms-2" href="/2023/1337.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">SoK: Public Key Encryption with Openings</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Carlo Brunetta, Hans Heum, and Martijn Stam</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1337" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1337" class="paper-abstract">When modelling how public key encryption can enable secure communication, we should acknowledge that secret information, such as private keys or the randomness used for encryption, could become compromised. Intuitively, one would expect unrelated communication to remain secure, yet formalizing this intuition has proven challenging. Several security notions have appeared that aim to capture said scenario, ranging from the multi-user setting with corruptions, via selective opening attacks (SOA), to non-committing encryption (NCE). Remarkably, how the different approaches compare has not yet been systematically explored.
+
+We provide a novel framework that maps each approach to an underlying philosophy of confidentiality: indistinguishability versus simulatability based, each with an a priori versus an a posteriori variant, leading to four distinct philosophies. In the absence of corruptions, these notions are largely equivalent; yet, in the presence of corruptions, they fall into a hierarchy of relative strengths, from IND-CPA and IND-CCA at the bottom, via indistinguishability SOA and simulatability SOA, to NCE at the top.
+
+We provide a concrete treatment for the four notions, discuss subtleties in their definitions and asymptotic interpretations and identify limitations of each. Furthermore, we re-cast the main implications of the hierarchy in a concrete security framework, summarize and contextualize other known relations, identify open problems, and close a few gaps.
+
+We end on a survey of constructions known to achieve the various notions. We identify and name a generic random-oracle construction that has appeared in various guises to prove security in seemingly different contexts. It hails back to Bellare and Rogaway&#39;s seminal work on random oracles (CCS&#39;93) and, as previously shown, suffices to meet one of the strongest notions of our hierarchy (single-user NCE with bi-openings).</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2019/231">2019/231</a>
+      <a class="ms-2" href="/2019/231.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Secret-Sharing Schemes for General and Uniform Access Structures</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Benny Applebaum, Amos Beimel, Oriol Farràs, Oded Nir, and Naty Peter</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2019-231" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2019-231" class="paper-abstract">A secret-sharing scheme allows some authorized sets of parties to reconstruct  a secret; the collection of authorized sets is called the access structure.
+For over 30 years, it was known that any (monotone) collection of authorized sets can be realized by a secret-sharing scheme whose shares are of size $2^{n-o(n)}$ and until recently no better scheme was known. In a recent breakthrough, Liu and Vaikuntanathan (STOC 2018) have reduced the share size to $O(2^{0.994n})$. Our first contribution is improving the exponent of secret sharing down to $0.892$. For the special case of linear secret-sharing schemes, we get an exponent of $0.942$ (compared to $0.999$ of Liu and Vaikuntanathan).
+
+Motivated by the construction of Liu and Vaikuntanathan, we study secret-sharing schemes for uniform access structures.
+An access structure is $k$-uniform if all sets of size larger than $k$ are authorized, all sets of size smaller than $k$ are unauthorized, and each set of size $k$ can be either authorized or unauthorized. 
+The construction of Liu and Vaikuntanathan starts from protocols for conditional disclosure of secrets, constructs secret-sharing schemes for uniform access structures from them, and combines these schemes in order to obtain secret-sharing schemes for general access structures. 
+Our second contribution in this paper is  constructions of secret-sharing schemes for uniform access structures. We achieve the following results:
+
+a) A secret-sharing scheme for $k$-uniform access structures for large secrets in which the share size is $O(k^2)$ times the size of the secret.
+b) A linear secret-sharing scheme for $k$-uniform access structures for a binary secret  in which the share size is $\tilde{O}(2^{h(k/n)n/2})$ (where $h$ is the binary entropy function). By counting arguments, this construction is optimal (up to polynomial factors).
+c) A secret-sharing scheme for $k$-uniform access structures for a binary secret in which the share size is
+$kn\cdot2^{\tilde{O}(\sqrt{k \log n})}$.
+
+Our third contribution is a construction of ad-hoc PSM protocols, i.e., PSM protocols in which only a subset of the parties will compute a function on their inputs. This result is based on ideas we used in the construction of secret-sharing schemes for $k$-uniform access structures for a binary secret.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1336">2023/1336</a>
+      <a class="ms-2" href="/2023/1336.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Riggs: Decentralized Sealed-Bid Auctions</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Nirvan Tyagi, Arasu Arun, Cody Freitag, Riad Wahby, Joseph Bonneau, and David Mazières</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1336" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1336" class="paper-abstract">We introduce the first practical protocols for fully decentralized
+sealed-bid auctions using timed commitments. Timed commitments
+ensure that the auction is finalized fairly even if all participants drop
+out after posting bids or if $n-1$ bidders collude to try to learn the
+$n^{th}$ bidder’s bid value. Our protocols rely on a novel non-malleable
+timed commitment scheme which efficiently supports range proofs
+to establish that bidders have sufficient funds to cover a hidden
+bid value. This allows us to penalize users who abandon bids for
+exactly the bid value, while supporting simultaneous bidding in
+multiple auctions with a shared collateral pool. Our protocols are
+concretely efficient and we have implemented them in an Ethereum-
+compatible smart contract which automatically enforces payment
+and delivery of an auctioned digital asset.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1334">2023/1334</a>
+      <a class="ms-2" href="/2023/1334.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">A Generic Construction of Tightly Secure Password-based Authenticated Key Exchange</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Jiaxin Pan and Runzhi Zeng</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1334" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1334" class="paper-abstract">We propose a generic construction of password-based authenticated key exchange (PAKE) from key encapsulation mechanisms (KEM). Assuming that the KEM is oneway secure against plaintext-checkable attacks (OW-PCA), we prove that our PAKE protocol is \textit{tightly secure} in the Bellare-Pointcheval-Rogaway model (EUROCRYPT 2000). Our tight security proofs require ideal ciphers and random oracles. The OW-PCA security is relatively weak and can be implemented tightly with the Diffie-Hellman assumption, which generalizes the work of Liu et al. (PKC 2023), and ``almost&#39;&#39; tightly with lattice-based assumptions, which tightens the security loss of the work of Beguinet et al. (ACNS 2023) and allows more efficient practical implementation with Kyber. Beyond these, it opens an opportunity of constructing tight PAKE based on various assumptions.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/164">2023/164</a>
+      <a class="ms-2" href="/2023/164.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Input Transformation Based Efficient Zero-Knowledge Argument System for Arbitrary Circuits with High Efficiency</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Frank Y.C. Lu</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-164" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-164" class="paper-abstract">We introduce a new efficient transparent interactive zero-knowledge argument system that is based on the new input transformation concept which we will introduce in this paper. The core of this concept is a mechanism that converts input parameters into a format that can be processed directly by the circuit so that the circuit output can be verified through direct computation of the circuit or business logic per se. In our protocol, we convert circuit inputs in Pedersen commitment form to linear polynomials in integer form so the verifiers can use standard integer operations to compute and verify the circuit output.
+
+Our benchmark result shows our approach can significantly improve verifier runtime performance by more than one order of magnitude over the state of the art while keeping the prover runtime and communication cost competitive with that of the state of the art.
+
+In addition, the direct computation mechanism in our protocol allows the prover to add specifically designed gates to optimize the evaluation process. This is because the circuit is verified by verifiers linearly ``computing&#34; the circuit, we therefore can use specialized custom gates anywhere in the circuit to bypass the ``inactive part&#34; of the circuit to further improve the performance.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1333">2023/1333</a>
+      <a class="ms-2" href="/2023/1333.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Neutrosophic Boolean Function and Rejection Sampling in Post Quantum Cryptography</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Shashi Kant Pandey</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1333" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1333" class="paper-abstract">The use of random seeds to a deterministic random bit generator to generate uniform random sampling has been applied multiple times in post-quantum algorithms. The finalists Dilithium and Kyber use SHAKE and AES to generate the random sequence at multiple stages of the algorithm. Here we characterize one of the sampleing techniques available in Dilithium for a random sequence of length 256 with the help of the neutrosophic Boolean function. The idea of the neutrosophic Boolean function came from the theory of neutrosophy and it is useful to study any ternary distributions. We present the non-existence of neutrobalanced bent functions specifically with respect to the sampling named SampleInBall in Dilithium.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1332">2023/1332</a>
+      <a class="ms-2" href="/2023/1332.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-07</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Abuse-Resistant Location Tracking: Balancing Privacy and Safety in the Offline Finding Ecosystem</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Gabrielle Beck, Harry Eldridge, Matthew Green, Nadia Heninger, and Abhishek Jain</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1332" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1332" class="paper-abstract">Location tracking accessories (or ``tracking tags&#39;&#39;) such as those sold by Apple, Samsung, and Tile, allow owners to track the location of their property and devices via offline tracking networks. The tracking protocols have been designed to ensure some level of user privacy against surveillance by the vendor. Such privacy mechanisms, however, seem to be at odds with the phenomenon of tracker-based stalking, where attackers use these very tags to monitor a target&#39;s movements. Numerous such criminal incidents have been reported, and in response, manufacturers have chosen to weaken privacy guarantees in order to allow users to detect malicious stalker tags.
+
+In this work we show how to achieve an improved trade-off between user privacy and stalker detection within the constraints of existing tracking protocols.  We implement our new protocol using families of list-decodable error-correcting codes, and give efficient algorithms for stalker detection under realistic conditions.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1097">2023/1097</a>
+      <a class="ms-2" href="/2023/1097.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Quantum Money from Abelian Group Actions</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Mark Zhandry</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1097" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1097" class="paper-abstract">We give a construction of public key quantum money, and even a strengthened version called quantum lightning, from abelian group actions, which can in turn be constructed from suitable isogenies over elliptic curves. We prove security in the generic group model for group actions under a plausible computational assumption, and develop a general toolkit for proving quantum security in this model. Along the way, we explore knowledge assumptions and algebraic group actions in the quantum setting, finding significant limitations of these assumptions/models compared to generic group actions.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/395">2023/395</a>
+      <a class="ms-2" href="/2023/395.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Registered (Inner-Product) Functional Encryption</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Danilo Francati, Daniele Friolo, Monosij Maitra, Giulio Malavolta, Ahmadreza Rahimi, and Daniele Venturi</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-395" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-395" class="paper-abstract">Registered encryption (Garg $et\ al.$, TCC&#39;18) is an emerging  paradigm that tackles the key-escrow problem associated with identity-based encryption by replacing the private-key generator with a much weaker entity known as the key curator. The key curator holds no secret information, and is responsible to: 
+(i) update the master public key whenever a new user registers its own public key to the system;
+(ii) provide helper decryption keys to the  users already registered in the system, in order to still enable them to decrypt after new users join the system.
+For practical purposes, tasks (i) and (ii) need to be efficient, in the sense that the size of the public parameters, of the master public key, and of the helper decryption keys, as well as the running times for key generation and user registration, and the number of updates, must be small.
+
+In this paper, we generalize the notion of registered encryption to the setting of functional encryption (FE). As our main contribution, we show an efficient construction of registered FE for the special case of ($attribute\text{-}hiding$) inner-product predicates, built over asymmetric bilinear groups of prime order. Our scheme supports a $large$ attribute universe and is proven secure in the bilinear generic group model. We also implement our scheme and experimentally demonstrate the efficiency requirements of the registered settings. Our second contribution is a feasibility result where we build registered FE for $\mathsf{P}/\mathsf{poly}$ based on indistinguishability obfuscation and somewhere statistically binding hash functions.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/657">2022/657</a>
+      <a class="ms-2" href="/2022/657.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">BASALISC: Programmable Hardware Accelerator for BGV Fully Homomorphic Encryption</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Robin Geelen, Michiel Van Beirendonck, Hilder V. L. Pereira, Brian Huffman, Tynan McAuley, Ben Selfridge, Daniel Wagner, Georgios Dimou, Ingrid Verbauwhede, Frederik Vercauteren, and David W. Archer</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-657" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-657" class="paper-abstract">Fully Homomorphic Encryption (FHE) allows for secure computation on encrypted data. Unfortunately, huge memory size, computational cost and bandwidth requirements limit its practicality. We present BASALISC, an architecture family of hardware accelerators that aims to substantially accelerate FHE computations in the cloud. BASALISC is the first to implement the BGV scheme with fully-packed bootstrapping – the noise removal capability necessary for arbitrary-depth computation. It supports a customized version of bootstrapping that can be instantiated with hardware multipliers optimized for area and power.
+
+BASALISC is a three-abstraction-layer RISC architecture, designed for a 1 GHz ASIC implementation and underway toward 150mm2 die tape-out in a 12nm GF process. BASALISC&#39;s four-layer memory hierarchy includes a two-dimensional conflict-free inner memory layer that enables 32 Tb/s radix-256 NTT computations without pipeline stalls. Its conflict-resolution permutation hardware is generalized and re-used to compute BGV automorphisms without throughput penalty. BASALISC also has a custom multiply-accumulate unit to accelerate BGV key switching.
+
+The BASALISC toolchain comprises a custom compiler and a joint performance and correctness simulator. To evaluate BASALISC, we study its physical realizability, emulate and formally verify its core functional units, and we study its performance on a set of benchmarks. Simulation results show a speedup of more than 5,000× over HElib – a popular software FHE library.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1331">2023/1331</a>
+      <a class="ms-2" href="/2023/1331.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Pantheon: Private Retrieval from Public Key-Value Store</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Ishtiyaque Ahmad, Divyakant Agrawal, Amr El Abbadi, and Trinabh Gupta</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1331" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1331" class="paper-abstract">Consider a cloud server that owns a key-value store and provides a private query service to its clients. Preserving client privacy in this setting is difficult because the key-value store is public, and a client cannot encrypt or modify it. Therefore, privacy in this context implies hiding the access pattern of a client. Pantheon is a system that cryptographically allows a client to retrieve the value corresponding to a key from a public key-value store without allowing the server or any adversary to know any information about the key or value accessed. Pantheon devises a single-round retrieval protocol which reduces server-side latency by refining its cryptographic machinery and massively parallelizing the query execution workload. Using these novel techniques, Pantheon achieves a $93\times$ improvement for server-side latency over a state-of-the-art solution.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1330">2023/1330</a>
+      <a class="ms-2" href="/2023/1330.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Notes on Small Private Key Attacks on Common Prime RSA</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Mengce Zheng</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1330" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1330" class="paper-abstract">We point out critical deficiencies in lattice-based cryptanalysis of common prime RSA presented in ``Remarks on the cryptanalysis of common prime RSA for IoT constrained low power devices&#39;&#39; [Information Sciences, 538 (2020) 54--68]. To rectify these flaws, we carefully scrutinize the relevant parameters involved in the analysis during solving a specific trivariate integer polynomial equation. Additionally, we offer a synthesized attack illustration of small private key attacks on common prime RSA.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/875">2023/875</a>
+      <a class="ms-2" href="/2023/875.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">The Power of Undirected Rewindings for Adaptive Security</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Dennis Hofheinz, Julia Kastner, and Karen Klein</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-875" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-875" class="paper-abstract">Existing proofs of adaptive security (e.g., in settings in which decryption keys are adaptively revealed) often rely on guessing arguments. Such guessing arguments can be simple (and, e.g., just involve guessing which keys are revealed), or more complex &#34;partitioning&#39;&#39; arguments. Since guessing directly and negatively impacts the loss of the corresponding security reduction, this leads to black-box lower bounds for a number of cryptographic scenarios that involve adaptive security.
+
+In this work, we provide an alternative to such guessing arguments: instead of guessing in a security reduction which adaptive choices an adversary A makes, we rewind A many times until we can successfully embed a given computational challenge. The main benefit of using rewindings is that these rewindings can be arranged sequentially, and the corresponding reduction loss only accumulates additively (instead of multiplicatively, as with guessing). The main technical challenge is to show that A&#39;s success is not negatively affected after (potentially many) rewindings. To this end, we develop a machinery for &#34;undirected&#39;&#39; rewindings that preserve A&#39;s success across (potentially many) rewindings.
+
+We use this strategy to show
+  - security of the &#34;Logical Key Hierarchy&#39;&#39; protocol underlying the popular TreeKEM key management protocol, and
+  - security of the Goldreich-Goldwasser-Micali (GGM) pseudorandom function (PRF) as a prefix-constrained PRF.
+
+In both cases, we provide the first polynomial reductions to standard assumptions (i.e., to IND-CPA and PRG security, respectively), and in case of the GGM PRF, we also circumvent an existing lower bound.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1329">2023/1329</a>
+      <a class="ms-2" href="/2023/1329.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Layered Symbolic Security Analysis in DY$^\star$</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Karthikeyan Bhargavan, Abhishek Bichhawat, Pedram Hosseyni, Ralf Kuesters, Klaas Pruiksma, Guido Schmitz, Clara Waldmann, and Tim Würtele</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1329" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1329" class="paper-abstract">While cryptographic protocols are often analyzed in isolation, they are typically deployed within a stack of protocols, where each layer relies on the security guarantees provided by the protocol layer below it, and in turn provides its own security functionality to the layer above.  Formally analyzing the whole stack in one go is infeasible even for semi-automated verification tools, and impossible for pen-and-paper proofs. The DY$^\star$ protocol verification framework offers a modular and scalable technique that can reason about large protocols, specified as a set of F$^\star$ modules. However, it does not support the compositional verification of layered protocols since it treats the global security invariants monolithically.  In this paper, we extend DY$^\star$ with a new methodology that allows analysts to modularly analyze each layer in a way that compose to provide security for a protocol stack. Importantly, our technique allows a layer to be replaced by another implementation, without affecting the proofs of other layers. We demonstrate this methodology on two case studies. We also present a verified library of generic authenticated and confidential communication patterns that can be used in future protocol analyses and is of independent interest.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1328">2023/1328</a>
+      <a class="ms-2" href="/2023/1328.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Optimizing HE operations via Level-aware Key-switching Framework</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Intak Hwang, Jinyeong Seo, and Yongsoo Song</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1328" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1328" class="paper-abstract">In lattice-based Homomorphic Encryption (HE) schemes, the key-switching procedure is a core building block of non-linear operations but also a major performance bottleneck.
+The computational complexity of the operation is primarily determined by the so-called gadget decomposition, which transforms a ciphertext entry into a tuple of small polynomials before being multiplied with the corresponding evaluation key.
+However, the previous studies such as Halevi et al. (CT-RSA 2019) and Han and Ki (CT-RSA 2020) fix a decomposition function in the setup phase which is applied commonly across all ciphertext levels, resulting in suboptimal performance.
+
+In this paper, we introduce a novel key-switching framework for leveled HE schemes. We aim to allow the use of different decomposition functions during the evaluation phase so that the optimal decomposition method can be utilized at each level to achieve the best performance.
+A naive solution might generate multiple key-switching keys corresponding to all possible decomposition functions, and sends them to an evaluator. 
+However, our solution can achieve the goal without such communication overhead since it allows an evaluator to dynamically derive other key-switching keys from a single key-switching key depending on the choice of gadget decomposition.
+
+We implement our framework at a proof-of-concept level to provide concrete benchmark results. Our experiments show that we achieve the optimal performance at every level while maintaining the same computational capability and communication costs.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2021/1259">2021/1259</a>
+      <a class="ms-2" href="/2021/1259.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Parallel Repetition of $(k_1,\dots,k_{\mu})$-Special-Sound Multi-Round Interactive Proofs</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Thomas Attema and Serge Fehr</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2021-1259" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2021-1259" class="paper-abstract">In many occasions, the knowledge error $\kappa$ of an interactive proof is not small enough, and thus needs to be reduced. This can be done generically by repeating the interactive proof in parallel. While there have been many works studying the effect of parallel repetition on the {\em soundness error} of interactive proofs and arguments, the effect of parallel repetition on the {\em knowledge error} has largely remained unstudied. Only recently it was shown that the $t$-fold parallel repetition of {\em any} interactive protocol reduces the knowledge error from $\kappa$ down to $\kappa^t +\nu$ for any non-negligible term $\nu$. This generic result is suboptimal in that it does not give the knowledge error $\kappa^t$ that one would expect for typical protocols, and, worse, the knowledge error remains non-negligible.
+
+In this work we show that indeed the $t$-fold parallel repetition of any $(k_1,\dots,k_{\mu})$-special-sound multi-round public-coin interactive proof optimally reduces the knowledge error from $\kappa$ down to $\kappa^t$. At the core of our results is an alternative, in some sense more fine-grained, measure of quality of a dishonest prover than its success probability, for which we show that it characterizes when knowledge extraction is possible. This new measure then turns out to be very convenient when it comes to analyzing the parallel repetition of such interactive proofs.
+
+While parallel repetition reduces the knowledge error, it is easily seen to {\em increase} the {\em completeness error}. For this reason, we generalize our result to the case of $s$-out-of-$t$ threshold parallel repetition, where the verifier accepts if $s$ out of $t$ of the parallel instances are accepting. An appropriately chosen threshold $s$ allows both the knowledge error and completeness error to be reduced simultaneously.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1327">2023/1327</a>
+      <a class="ms-2" href="/2023/1327.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Fine-Grained Secure Attribute-Based Encryption</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Yuyu Wang, Jiaxin Pan, and Yu Chen</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1327" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1327" class="paper-abstract">Fine-grained cryptography is constructing cryptosystems in a setting where an adversary’s resource is a-prior bounded and an honest party has less resource than an adversary. Currently, only simple form of encryption schemes, such as secret-key and public-key encryption, are constructed in this setting.
+In this paper, we enrich the available tools in fine-grained cryptography by proposing the first fine-grained secure attribute-based encryption (ABE) scheme. Our construction is adaptively secure under the widely accepted worst-case assumption, NC1$\subsetneq \oplus$L/poly, and it is presented in a generic manner using the notion of predicate encodings (Wee, TCC’14). By properly instantiating the underlying encoding, we can obtain different types of ABE schemes, including identity-based encryption. Previously, all of these schemes were unknown in fine-grained cryptography. Our main technical contribution is constructing ABE schemes without using pairing or the Diffie-Hellman assumption. Hence, our results show that, even if one-way functions do not exist, we still have ABE schemes with meaningful security. For more application of our techniques, we construct an efficient (quasi-adaptive) non-interactive zero-knowledge (QA-NIZK) proof system.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1326">2023/1326</a>
+      <a class="ms-2" href="/2023/1326.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Accio: Variable-Amount, Optimized-Unlinkable and NIZK-Free Off-Chain Payments via Hubs</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Zhonghui Ge, Jiayuan Gu, Chenke Wang, Yu Long, Xian Xu, and Dawu Gu</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1326" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1326" class="paper-abstract">Payment channel hubs (PCHs) serve as a promising solution to achieving quick off-chain payments between pairs of users. They work by using an untrusted tumbler to relay the payments between the payer and payee and enjoy the advantages of low cost and high scalability. However, the most recent privacy-preserving payment channel hub solution that supports variable payment amounts suffers from limited unlinkability, e.g., being vulnerable to the abort attack. Moreover, this solution utilizes non-interactive zero-knowledge proofs, which bring huge costs on both computation time and communication overhead. Therefore, how to design PCHs that support variable amount payments and unlinkability, but reduce the use of huge-cost cryptographic tools as much as possible, is significant for the large-scale practical applications of off-chain payments.
+
+In this paper, we propose Accio, a variable amount payment channel hub solution with optimized unlinkability, by deepening research on unlinkability and constructing a new cryptographic tool. We provide the detailed Accio protocol and formally prove its security and privacy under the Universally Composable framework. Our prototype demonstrates its feasibility and the evaluation shows that Accio outperforms the other state-of-the-art works in both communication and computation costs.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/511">2023/511</a>
+      <a class="ms-2" href="/2023/511.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-06</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">$\text{MP}\ell\circ \mathrm{C}$: Privacy-Preserving IP Verification Using Logic Locking and Secure Multiparty Computation</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Dimitris Mouris, Charles Gouert, and Nektarios Georgios Tsoutsos</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-511" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-511" class="paper-abstract">The global supply chain involves multiple independent entities, and potential adversaries can exploit different attack vectors to steal proprietary designs and information. As a result, intellectual property (IP) owners and consumers have reasons to keep their designs private. Without a trusted third party, this mutual mistrust can lead to a deadlock where IP owners are unwilling to disclose their IP core before a financial agreement is reached, while consumers need assurance that the proprietary design will meet their integration needs without compromising the confidentiality of their test vectors. To address this challenge, we introduce an efficient framework called MPloC that resolves this deadlock by allowing owners and consumers to jointly evaluate the target design with consumer-supplied test vectors while preserving the privacy of both the IP core and the inputs. MPloC is the first work that combines secure multiparty computation (MPC) and logic-locking techniques to accomplish these goals. Our approach supports both semi-honest and malicious security models to allow users to balance stronger security guarantees with performance. We compare our approach to existing state-of-the-art works that utilize homomorphic encryption across several benchmarks and report runtime improvements of more than two orders of magnitude.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1053">2023/1053</a>
+      <a class="ms-2" href="/2023/1053.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">ASMesh: Anonymous and Secure Messaging in Mesh Networks Using Stronger, Anonymous Double Ratchet</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Alexander Bienstock, Paul Rösler, and Yi Tang</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1053" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1053" class="paper-abstract">The majority of secure messengers have single, centralized service providers that relay ciphertexts between users to enable asynchronous communication. However, in some scenarios such as mass protests in censored networks, relying on a centralized provider is fatal. Mesh messengers attempt to solve this problem by building ad hoc networks in which user clients perform the ciphertext-relaying task. Yet, recent analyses of widely deployed mesh messengers discover severe security weaknesses (Albrecht et al. CT-RSA&#39;21 &amp; USENIX Security&#39;22).
+
+To support the design of secure mesh messengers, we provide a new, more complete security model for mesh messaging. Our model captures forward and post-compromise security, as well as forward and post-compromise anonymity, both of which are especially important in this setting. We also identify novel, stronger confidentiality goals that can be achieved due to the special characteristics of mesh networks (e.g., delayed communication, distributed network and adversary).
+
+Finally, we develop a new protocol, called ASMesh, that provably satisfies these security goals. For this, we revisit Signal&#39;s Double Ratchet and propose non-trivial enhancements. On top of that, we add a mechanism that provides forward and post-compromise anonymity. Thus, our protocol efficiently provides strong confidentiality and anonymity under past and future user corruptions. Most of our results are also applicable to traditional messaging.
+
+We prove security of our protocols and evaluate their performance in simulated mesh networks. Finally, we develop a proof of concept implementation.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1325">2023/1325</a>
+      <a class="ms-2" href="/2023/1325.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">The Grant Negotiation and Authorization Protocol: Attacking, Fixing, and Verifying an Emerging Standard</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Florian Helmschmidt, Pedram Hosseyni, Ralf Kuesters, Klaas Pruiksma, Clara Waldmann, and Tim Würtele</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1325" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1325" class="paper-abstract">The Grant Negotiation and Authorization Protocol (GNAP) is an emerging authorization and authentication protocol which aims to consolidate and unify several use-cases of OAuth 2.0 and many of its common extensions while providing a higher degree of security. OAuth 2.0 is an essential cornerstone of the security of authorization and authentication for the Web, IoT, and beyond, and is used, among others, by many global players, like Google, Facebook, and Microsoft. Because of historically grown limitations and issues of OAuth 2.0 and its various extensions, prominent members of the OAuth community decided to create GNAP, a new and completely resigned authorization and authentication protocol. Given GNAP&#39;s advantages over OAuth 2.0 and its support within the OAuth community, GNAP is expected to become at least as important as OAuth 2.0.
+
+In this paper, we present the first formal security analysis of GNAP. We build a detailed formal model of GNAP, based on the Web Infrastructure Model (WIM) of Fett, Küsters, and Schmitz.  Based on this model, we provide formal statements of the key security properties of GNAP, namely, authorization, authentication, and session integrity for both authorization and authentication. In the process of trying to prove these properties, we have discovered several attacks on GNAP. We present these attacks as well as modifications to the protocol that prevent them. These modifications have been incorporated into the GNAP specification after discussion with the GNAP working group. We give the first formal security guarantees for GNAP, by proving that GNAP, with our modifications applied, satisfies the mentioned security properties.
+
+GNAP was still an early draft when we started our analysis, but is now on track to be adopted as an IETF standard. Hence, our analysis is just in time to help ensure the security of this important emerging standard.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2020/080">2020/080</a>
+      <a class="ms-2" href="/2020/080.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Better Secret-Sharing via Robust Conditional Disclosure of Secrets</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Benny Applebaum, Amos Beimel, Oded Nir, and Naty Peter</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2020-080" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2020-080" class="paper-abstract">A secret-sharing scheme allows to distribute a secret $s$ among $n$ parties such that only some predefined ``authorized&#39;&#39; sets of parties can reconstruct the secret, and all other ``unauthorized&#39;&#39; sets learn nothing about $s$.  For over 30 years, it was known that any (monotone) collection of authorized sets can be realized by a secret-sharing scheme whose shares are of size $2^{n-o(n)}$ and until recently no better scheme was known. In a recent breakthrough, Liu and Vaikuntanathan (STOC 2018) have reduced the share size to $2^{0.994n+o(n)}$, which was later improved to $2^{0.892n+o(n)}$ by Applebaum et al. (EUROCRYPT 2019).
+
+In this paper we improve the exponent of general secret-sharing schemes down to $0.637$. For the special case of linear secret-sharing schemes, we get an exponent of $0.762$ (compared to $0.942$ of Applebaum et al.). As our main building block, we introduce a new  \emph{robust} variant of conditional disclosure of secrets (robust CDS) that achieves unconditional security even under bounded form of re-usability. We show that the problem of general secret-sharing schemes reduces to robust CDS protocols with sub-exponential overhead and derive our main result by implementing robust CDS with a non-trivial exponent. The latter construction follows by presenting a general immunization procedure that turns standard CDS into a robust CDS.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1324">2023/1324</a>
+      <a class="ms-2" href="/2023/1324.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Fine-Grained Proxy Re-Encryption: Definitions &amp; Constructions from LWE</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Yunxiao Zhou, Shengli Liu, Shuai Han, and Haibin Zhang</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1324" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1324" class="paper-abstract">Proxy re-encryption (PRE) allows a proxy with a re-encryption key to translate a ciphertext intended for Alice (delegator) to another ciphertext intended for Bob (delegatee) without revealing the underlying message. However, with PRE, Bob can obtain the whole message from the re-encrypted ciphertext, and Alice cannot take flexible control of the extent of the message transmitted to Bob. 
+ 
+In this paper, we propose a new variant of PRE, called Fine-Grained PRE (FPRE), to support fine-grained re-encryptions. An FPRE is associated with a function family F, and each re-encryption key rk_{A→B}^f is associated with a function f ∈ F. With FPRE, Alice now can authorize re-encryption power to proxy by issuing rk_{A→B}^f to it, with f chosen by herself. Then the proxy can translate ciphertext encrypting m to Bob&#39;s ciphertext encrypting f(m) with such a fine-grained re-encryption key, and Bob only obtains a function of message m. In this way, Alice can take flexible control of the message spread by specifying functions.
+ 
+For FPRE, we formally define its syntax and formalize security notions including CPA security, ciphertext pseudo-randomness, unidirectionality, non-transitivity, collusion-safety under adaptive corruptions in the multi-user setting. Moreover, we propose a new security notion named ciphertext unlinkability, which blurs the link between a ciphertext and its re-encrypted ciphertext to hide the proxy connections between users. We establish the relations between those security notions.
+ 
+As for constructions, we propose two FPRE schemes, one for bounded linear functions and the other for deletion functions, based on the learning-with-errors (LWE) assumption. Our FPRE schemes achieve all the aforementioned desirable securities under adaptive corruptions in the standard model. As far as we know, our schemes provide the first solution to PRE with security under adaptive corruptions in the standard model.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1323">2023/1323</a>
+      <a class="ms-2" href="/2023/1323.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">MAFIA: Protecting the Microarchitecture of Embedded Systems Against Fault Injection Attacks</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Thomas Chamelot, Damien Couroussé, and Karine Heydemann</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1323" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1323" class="paper-abstract">Fault injection attacks represent an effective threat to embedded systems. Recently, Laurent et al. have reported that fault injection attacks can leverage faults inside the microarchitecture. However, state-of-the-art counter-measures, hardware-only or with hardware support, do not consider the integrity of microarchitecture control signals that are the target of these faults.
+We present MAFIA, a microarchitecture protection against fault injection attacks. MAFIA ensures integrity of pipeline control signals through a signature-based mechanism, and ensures fine-grained control-flow integrity with a complete indirect branch support and code authenticity. We analyse the security properties of two different implementations with different security/overhead trade-offs: one with a CBC-MAC/Prince signature function, and another one with a CRC32. We present our implementation of MAFIA in a RISC-V processor, supported by a dedicated compiler toolchain based on LLVM/Clang. We report a hardware area overhead of 23.8 % and 6.5 % for the CBC-MAC/Prince and CRC32 respectively. The average code size and execution time overheads are 29.4% and 18.4% respectively for the CRC32 implementation and are 50 % and 39 % for the CBC-MAC/Prince.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1322">2023/1322</a>
+      <a class="ms-2" href="/2023/1322.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Boosting the Performance of High-Assurance Cryptography: Parallel Execution and Optimizing Memory Access in Formally-Verified Line-Point Zero-Knowledge</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Vitor Pereira, Stéphane Graham-Lengrand, Karim Eldefrawy, Steve Lu, Samuel Dittmer, and Rafail Ostrovsky</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1322" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1322" class="paper-abstract">Despite the notable advances in the development of high-assurance, verified implementations of cryptographic protocols, such implementations typically face significant performance overheads, particularly due to the penalties induced by formal verification and automated extraction of executable code. In this paper, we address some core performance challenges facing computer-aided cryptography by presenting a formal treatment for accelerating such verified implementations based on multiple generic optimizations covering parallelism and memory access. We illustrate our techniques for addressing such performance bottlenecks using the Line-Point Zero-Knowledge (LPZK) protocol as a case study. Our starting point is a new verified implementation of LPZK that we formalize and synthesize using EasyCrypt; our first implementation is developed to reduce the proof effort and without considering the performance of the extracted executable code. We then show how such (automatically) extracted code can be optimized in three different ways to obtain a 3000x speedup and thus matching the performance of the manual implementation of LPZK. We obtain such performance gains by first  modifying the algorithmic specifications, then by adopting a provably secure parallel execution model, and finally by optimizing the memory access structures. All optimizations are first formally verified inside EasyCrypt, and then executable code is automatically synthesized from each step of the formalization. For each optimization, we analyze performance gains resulting from it and also address challenges facing the computer-aided security proofs thereof, and challenges facing automated synthesis of executable code with such an optimization.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1321">2023/1321</a>
+      <a class="ms-2" href="/2023/1321.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Generic Constructions of Compact and Tightly Selective-Opening Secure Public-key Encryption Schemes</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Jiaxin Pan, Benedikt Wagner, and Runzhi Zeng</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1321" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1321" class="paper-abstract">We propose two generic constructions of public-key encryption (PKE) with tight simulation-based selective-opening security against chosen-ciphertext attacks (SIM-SO-CCA) in the random oracle model. Our constructions can be instantiated with a small constant number of elements in the ciphertext, ignoring smaller contributions from symmetric-key encryption. That is, they have compact ciphertexts. Furthermore, three of our instantiations have compact public keys as well.
+        Known (almost) tightly SIM-SO-CCA secure PKE schemes are due to the work of Lyu et al. (PKC 2018) and Libert et al. (Crypto 2017). They have either linear-size ciphertexts or linear-size public keys. Moreover, they only achieve almost tightness, namely, with security loss depending on the security parameter.
+        In contrast to them, our schemes are the first ones achieving both tight SIM-SO-CCA security and compactness. More precisely, our two generic constructions are:
+        - From Pseudorandom KEM: Our first generic construction is from a key encapsulation mechanism (KEM) with pseudorandom ciphertexts against plaintext-checking attacks.  Such a KEM can be constructed directly from the Strong Diffie-Hellman (StDH), Computational DH (CDH), and Decisional DH assumptions. Both their ciphertexts and public keys are compact. Their security loss is a small constant. Interestingly, our CDH-based construction is the first scheme achieving all these advantages based on a weak search assumption. Furthermore, we also give a generic construction of such a KEM, which yields an efficient tightly SIM-SO-CCA PKE from lattices.
+        - From Lossy Encryption: Our second scheme is the well-known Fujisaki-Okamoto transformation. We show that it can turn a lossy encryption scheme into a tightly SIM-SO-CCA secure PKE. This transformation preserves both tightness and compactness of the underlying lossy encryption, which is in contrast to the non-tight proof of Heuer et al. (PKC 2015).</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1320">2023/1320</a>
+      <a class="ms-2" href="/2023/1320.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Practical Privacy-Preserving Machine Learning using Fully Homomorphic Encryption</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Michael Brand and Gaëtan Pradel</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1320" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1320" class="paper-abstract">Machine learning is a widely-used tool for analysing large datasets, but increasing public demand for privacy preservation and the corresponding introduction of privacy regulations have severely limited what data can be analysed, even when this analysis is for societal benefit.
+Homomorphic encryption, which allows computation on encrypted data, is a natural solution to this dilemma, allowing data to be analysed without sacrificing privacy. 
+Because homomorphic encryption is computationally expensive, however, current solutions are mainly restricted to use it for inference and not training.
+
+In this work, we present a practically viable approach to privacy-preserving machine learning training using fully homomorphic encryption.
+Our method achieves fast training speeds, taking less than 45 seconds to train a binary classifier over thousands of samples on a single mid-range computer, significantly outperforming state-of-the-art results.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1086">2023/1086</a>
+      <a class="ms-2" href="/2023/1086.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">On One-way Functions and the Worst-case Hardness of Time-Bounded Kolmogorov Complexity</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Yanyi Liu and Rafael Pass</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1086" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1086" class="paper-abstract">Whether one-way functions (OWF) exist is arguably the most important
+problem in Cryptography, and beyond. While lots of candidate
+constructions of one-way functions are known, and recently also
+problems whose average-case hardness characterize the existence of
+OWFs have been demonstrated, the question of
+whether there exists some \emph{worst-case hard problem} that characterizes
+the existence of one-way functions has remained open since their
+introduction in 1976.
+
+In this work, we present the first ``OWF-complete&#39;&#39; promise
+problem---a promise problem whose worst-case hardness w.r.t. $\BPP$ 
+(resp. $\Ppoly$) is \emph{equivalent} to the existence of OWFs secure 
+against $\PPT$ (resp. $\nuPPT$) algorithms. The problem is a
+variant of the Minimum Time-bounded Kolmogorov Complexity
+problem ($\mktp[s]$ with a threshold $s$), where we condition on
+instances having small ``computational depth&#39;&#39;.
+
+We furthermore show that depending on the choice of the 
+threshold $s$, this problem characterizes either ``standard&#39;&#39;
+(polynomially-hard) OWFs, or quasi polynomially- or
+subexponentially-hard OWFs. Additionally, when the threshold is
+sufficiently small (e.g., $2^{O(\sqrt{n})}$ or $\poly\log n$) then
+\emph{sublinear} hardness of this problem suffices to characterize 
+quasi-polynomial/sub-exponential OWFs.
+
+While our constructions are black-box, our analysis is \emph{non-
+black box}; we additionally demonstrate that fully black-box constructions 
+of OWF from the worst-case hardness of this problem are impossible.
+We finally show that, under Rudich&#39;s conjecture, and standard derandomization 
+assumptions, our problem is not inside  $\coAM$; as such, it 
+yields the first candidate problem believed to be outside of $\AM \cap \coAM$, 
+or even ${\bf SZK}$, whose worst case hardness implies the existence of OWFs.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/447">2023/447</a>
+      <a class="ms-2" href="/2023/447.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Provable Lattice Reduction of $\mathbb Z^n$ with Blocksize $n/2$</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Léo Ducas</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-447" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-447" class="paper-abstract">The Lattice Isomorphism Problem (LIP) is the computational task of recovering, assuming it exists, a orthogonal linear transformation sending one lattice to another. For cryptographic purposes, the case of the trivial lattice $\mathbb Z^n$ is of particular interest ($\mathbb Z$LIP). Heuristic analysis suggests that the BKZ algorithm with blocksize $\beta = n/2 + o(n)$ solves such instances (Ducas, Postlethwaite, Pulles, van Woerden, ASIACRYPT 2022). 
+
+In this work, I propose a provable version of this statement, namely, that $\mathbb Z$LIP can indeed be solved by making polynomially many calls to a Shortest Vector Problem (SVP) oracle in dimension at most $n/2 + 1$.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1319">2023/1319</a>
+      <a class="ms-2" href="/2023/1319.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">On the Black-Box Separation Between Ring Signatures and Public Key Encryptions</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Kyosuke Yamashita and Keisuke Hara</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1319" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=FOUNDATIONS"><small class="badge category category-FOUNDATIONS">Foundations</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1319" class="paper-abstract">In this paper, we show that it is impossible to construct a public key encryption scheme (PKE) from a ring signature scheme in a black-box fashion in the standard model.  Such an impossibility is highly non-trivial because, to the best of our knowledge, known generic constructions of ring signature scheme are based on public key cryptosystems or in the random oracle model.  Technically, we introduce a new cryptographic primitive named indistinguishable multi-designated verifiers signature (IMDVS), and prove that (i) IMDVS is equivalent to PKE, and (ii) it is impossible to construct IMDVS from a ring signature scheme in a generic way.  Our result suggests an essential gap between ring signature and group signature, as it is known that group signature implies PKE.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1189">2023/1189</a>
+      <a class="ms-2" href="/2023/1189.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">PAP: A Privacy-Preserving Authentication Scheme with Anonymous Payment for V2G Networks</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Xiaohan Yue, Xue Bi, Haibo Yang, Shi Bai, and Yuan He</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1189" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1189" class="paper-abstract">Vehicle-to-grid (V2G) networks, as an emerging smart grid paradigm, can be integrated with renewable energy resources to provide power services and manage electricity demands. When accessing electricity services, an electric vehicle(EV) typically provides authentication or/and payment information containing identifying data to a service provider, which raises privacy concerns as malicious entities might trace EV activity or exploit personal information. Although numerous anonymous authentication and payment schemes have been presented for V2G networks, no such privacy-preserving scheme supports authentication and payment simultaneously. Therefore, this paper is the first to present a privacy-preserving authentication scheme with anonymous payment for V2G networks (PAP, for short). In addition, this scheme also supports accountability and revocability, which are practical features to prevent malicious behavior; minimal attribute disclosure, which maximizes the privacy of EV when responding to the service provider&#39;s flexible access policies; payment binding, which guarantees the accountability in the payment phase; user-controlled linkability, which enables EV to decide whether different authentication sessions are linkable for continuous services. On the performance side, we implement PAP with the pairing cryptography library, then evaluate it on different hardware platforms, showing that it is essential for V2G applications.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1264">2023/1264</a>
+      <a class="ms-2" href="/2023/1264.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-05</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">An optimization of the addition gate count in Plonkish circuits</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Steve Thakur</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1264" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1264" class="paper-abstract">We slightly generalize Plonk&#39;s ([GWC19]) permutation argument by replacing permutations with (possibly non-injective) self-maps of an interval. We then use this succinct argument to obtain a protocol for weighted sums on committed vectors, which, in turn, allows us to eliminate the intermediate gates arising from high fan-in additions in Plonkish circuits.  
+
+We use the KZG10 polynomial commitment scheme, which allows for a universal updateable CRS linear in the circuit size. In keeping with our recent work ([Th23]), we have used the monomial basis since it is compatible with any sufficiently large prime scalar field. In settings where the scalar field has a suitable smooth order subgroup, the techniques can be efficiently ported to a Lagrange basis.
+
+The proof size is constant, as is the verification time which is dominated by a single pairing check. For committed vectors of length $n$, the proof generation is $O(n\cdot \log(n))$ and is dominated by the $\mathbb{G}_1$-MSMs and a single sum of a few polynomial products over the prime scalar field via multimodular FFTs.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1318">2023/1318</a>
+      <a class="ms-2" href="/2023/1318.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Two-Round Threshold Lattice Signatures from Threshold Homomorphic Encryption</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Kamil Doruk Gur, Jonathan Katz, and Tjerand Silde</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1318" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1318" class="paper-abstract">Much recent work has developed efficient protocols for threshold signatures, where $n$ parties share a signing key and some threshold $t$ of those parties must interact to produce a signature. Yet efficient threshold signatures with post-quantum security have been elusive, with the state-of-the-art being a two-round scheme by Damgård et al. based on lattices that support only the full threshold case (i.e., $t=n$).
+
+We show here a two-round threshold signature scheme based on standard lattice assumptions that support arbitrary thresholds $t\leq n$. Estimates of our scheme&#39;s performance at the $128$-bit security level with a trusted setup show that in the $3$-out-of-$5$ case, we obtain signatures of size $11.5$ KB and public keys of size $13.6$ KB, with an execution of the signing protocol using roughly $1.5$ MB of communication per party. We achieve improved parameters if only a small bounded number of signatures are ever issued with the same key.
+
+As an essential building block and independent contribution, we construct a maliciously secure threshold (linearly) homomorphic encryption scheme that supports arbitrary thresholds $t \leq n$.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1317">2023/1317</a>
+      <a class="ms-2" href="/2023/1317.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Pisces: Private and Compliable Cryptocurrency Exchange</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Ya-Nan Li, Tian Qiu, and Qiang Tang</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1317" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1317" class="paper-abstract">Cryptocurrency exchange platforms such as Coinbase, Binance, enable users to purchase and sell cryptocurrencies conveniently just like trading stocks/commodities. However, because of the nature of blockchain, when a user withdraws coins (i.e., transfers coins to an external on-chain account), all future transactions can be learned by the platform. This is in sharp contrast to conventional stock exchange where all external activities of users are always hidden from the platform. Since the platform knows highly sensitive user private information such as passport number, and bank information, linking all (on-chain) transactions raises a serious privacy concern about the potential disastrous data breach in those cryptocurrency exchange platforms.
+
+In this paper, we propose a cryptocurrency exchange that restores user anonymity for the first time. To our surprise, the seemingly well-studied privacy/anonymity problem has several new challenges in this setting. Since the public blockchain and internal transaction activities naturally provide many non-trivial leakages to the platform, internal privacy is not only useful in the usual sense but also becomes necessary for regaining the basic anonymity of user transactions. We also ensure that the user cannot double spend, and the user has to properly report accumulated profit for tax purposes, even in the private setting.  We give a careful modeling and efficient construction of the system that achieves constant computation and communication overhead (with only simple cryptographic tools and rigorous security analysis); we also implement our system and evaluate its practical performance.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/011">2023/011</a>
+      <a class="ms-2" href="/2023/011.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Using the RSA or RSA-B accumulator in anonymous credential schemes</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Sietse Ringers</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-011" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-011" class="paper-abstract">We review the two RSA-based accumulators introduced by Camenisch and Lysyanskaya in 2002 in the setting of revocation for anonymous credential schemes, such as Idemix or BBS+. We show that in such a setting, the lower and upper bounds placed on the accumulated values in the paper are unnecessarily strict; they can be removed almost entirely (up to the group order of the credential scheme). This allows the accumulators to be used on elliptic curves of ordinary sizes, such as the ones on which BBS+ is commonly implemented. We also offer some notes and optimizations for implementations of anonymous credential schemes that use these accumulators to enable revocation.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/912">2022/912</a>
+      <a class="ms-2" href="/2022/912.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Individual Discrete Logarithm with Sublattice Reduction</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Haetham AL ASWAD and Cécile PIERROT</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-912" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-912" class="paper-abstract">The Number Field Sieve and its numerous variants is the best algorithm to compute discrete logarithms in medium and large characteristic finite fields. When the extension degree $n$ is composite and the characteristic~$p$ is of medium size, the Tower variant (TNFS) is asymptotically the most efficient one. Our work deals with the last main step, namely the individual logarithm step, that computes a smooth decomposition of a given target~$T$ in the finite field thanks to two distinct phases: an initial splitting step, and a descent tree.
+In this article, we improve on the current state-of-the-art Guillevic&#39;s algorithm dedicated to the initial  splitting step for composite~$n$. While still exploiting the proper subfields of the target finite field, we modify the lattice reduction subroutine that creates a lift in a number field of the target $T$. Our algorithm returns lifted elements with lower degrees and coefficients, resulting in lower norms in the number field. The lifted elements are not only much likely to be smooth because they have smaller norms,  but it permits to set a smaller smoothness bound for the descent tree. Asymptotically, our algorithm is faster and works for a larger area of finite fields than Guillevic&#39;s algorithm, being now relevant even when the medium characteristic $p$ is  such that $L_{p^n}(1/3) \leq p&lt; L_{p^n}(1/2)$.  In practice, we conduct experiments on $500$-bit and $2000$-bit composite finite fields: Our method becomes more efficient as the largest non trivial divisor of $n$ grows, being thus particularly adapted to even extension degrees.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1316">2023/1316</a>
+      <a class="ms-2" href="/2023/1316.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Communication Lower Bounds for Cryptographic Broadcast Protocols</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Erica Blum, Elette Boyle, Ran Cohen, and Chen-Da Liu-Zhang</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1316" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1316" class="paper-abstract">Broadcast protocols enable a set of $n$ parties to agree on the input of a designated sender, even facing attacks by malicious parties. In the honest-majority setting, a fruitful line of work harnessed randomization and cryptography to achieve low-communication broadcast protocols with sub-quadratic total communication and with &#34;balanced&#34; sub-linear communication cost per party. 
+
+However, comparatively little is known in the dishonest-majority setting. Here, the most communication-efficient constructions are based on the protocol of Dolev and Strong (SICOMP &#39;83), and sub-quadratic broadcast has not been achieved even using randomization and cryptography. On the other hand, the only nontrivial $\omega(n)$ communication lower bounds are restricted to deterministic protocols, or against strong adaptive adversaries that can perform &#34;after the fact&#34; removal of messages.
+
+We provide new communication lower bounds in this space, which hold against arbitrary cryptography and setup assumptions, as well as a simple protocol showing near tightness of our first bound.
+
+1) We demonstrate a tradeoff between resiliency and communication for randomized protocols secure against $n-o(n)$ static corruptions. For example, $\Omega(n\cdot {\sf polylog}(n))$ messages are needed when the number of honest parties is $n/{\sf polylog}(n)$; $\Omega(n\sqrt{n})$ messages are needed for $O(\sqrt{n})$ honest parties; and $\Omega(n^2)$ messages are needed for $O(1)$ honest parties. 
+
+Complementarily, we demonstrate broadcast with $O(n\cdot{\sf polylog}(n))$ total communication facing any constant fraction of static corruptions.
+
+2) Our second bound considers $n/2 + k$ corruptions and a weakly adaptive adversary that cannot remove messages &#34;after the fact.&#34; We show that any broadcast protocol within this setting can be attacked to force an arbitrary party to send messages to $k$ other parties. Our bound rules out, for example, broadcast facing $51\%$ corruptions, in which all non-sender parties have sublinear communication locality.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/692">2023/692</a>
+      <a class="ms-2" href="/2023/692.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">On the Invalidity of LV16/Lin17 Obfuscation Schemes</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Yupu Hu, Siyue Dong, Baocang Wang, and Xingting Dong</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-692" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-692" class="paper-abstract">Indistinguishability obfuscation (IO) is at the frontier of cryptography research for several years. LV16/Lin17 obfuscation schemes are famous progresses towards simplifying obfuscation mechanism. In fact, these two schemes only constructed two compact functional encryption (CFE) algorithms, while other things were taken to AJ15 IO frame or BV15 IO frame. That is, CFE algorithms are inserted into AJ15 IO frame or BV15 IO frame to form a complete IO scheme. The basic structure of two CFE algorithms can be described in the following way. The polynomial-time-computable Boolean function is transformed into a group of low-degree low-locality component functions by using randomized encoding, while some public combination of values of component functions is the value of original Boolean function. The encryptor uses constant-degree multilinear maps (rather than polynomial-degree multilinear maps) to encrypt independent variables of component functions. The decryptor uses zero-testing tool of multilinear maps to obtain values of component functions (rather than to obtain values of independent variables), and then uses public combination to obtain the value of original Boolean function.
+
+In this paper we restrict IO to be a real white box (RWB). Under such restriction we point out that LV16/Lin17 CFE algorithms being inserted into AJ15 IO frame are invalid. More detailedly, such insertion makes the adversary gradually learn the shape of the function, therefore the scheme is not secure. In other words, such scheme is not a real IO scheme, but rather a garbling scheme. It needs to be said that RWB restriction is reasonable, which means the essential contribution of IO for cryptography research.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/1742">2022/1742</a>
+      <a class="ms-2" href="/2022/1742.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">A Simple Noncommutative UOV Scheme</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Lih-Chung Wang, Po-En Tseng, Yen-Liang Kuan, and Chun-Yen Chou</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-1742" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PUBLICKEY"><small class="badge category category-PUBLICKEY">Public-key cryptography</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-1742" class="paper-abstract">In this paper, we propose a simple noncommutative-ring based UOV signature scheme with key-randomness alignment: Simple NOVA, which can be viewed as a simplified version of NOVA[48]. We simplify the design of NOVA by skipping the perturbation trick used in NOVA, thus shortens the key generation process and accelerates the signing and verification. Together with a little modification accordingly, this alternative version of NOVA is also secure and may be more suitable for practical uses. We also use Magma to actually implement and give a detailed security analysis against known major attacks.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2022/1072">2022/1072</a>
+      <a class="ms-2" href="/2022/1072.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Recursion over Public-Coin Interactive Proof Systems; Faster Hash Verification</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Alexandre Belling, Azam Soleimanian, and Olivier Bégassat</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2022-1072" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2022-1072" class="paper-abstract">SNARK is a well-known family of cryptographic tools that is increasingly used in the field of computation integrity at scale. In this area, multiple works have introduced SNARK-friendly cryptographic primitives:  hashing, but also encryption and signature verification. Despite all the efforts to create cryptographic primitives that can be proved faster, it remains a major performance hole in practice. In this paper, we present a recursive technique that can improve the efficiency of the prover by an order of magnitude compared to proving MiMC hashes (a SNARK-friendly hash function, Albrecht et al. 2016)  with a Groth16 (Eurocrypt 2016) proof. We use GKR (a well-known public-coin argument system by Goldwasser et al., STOC 2008) to prove the integrity of hash computations and embed the GKR verifier inside a SNARK circuit. The challenge comes from the fact that GKR is a public-coin interactive protocol, and applying Fiat-Shamir naively may result in worse performance than applying existing techniques directly. This is because Fiat-Shamir itself is involved with hash computation over a large string. We take advantage of a property that SNARK schemes commonly have, to build a protocol in which  the Fiat-Shamir hashes have very short inputs. The technique we present is generic and can be applied over any SNARK-friendly hash,  most known SNARK schemes, and any (one-round) public-coin argument system in place of GKR. We emphasize that while our general compiler is secure in the random oracle model, our concrete instantiation (i.e., GKR plus outer SNARK) is only proved to be  heuristically secure. This is due to the fact we first need to convert the GKR protocol to a one-round  protocol. Thus, the random oracle of GKR, starting from the second round, is replaced with a concrete hash inside the outer layer SNARK which makes the security-proof heuristic.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2016/987">2016/987</a>
+      <a class="ms-2" href="/2016/987.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-04</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">A Key to Success -- Success Exponents for Side-Channel Distinguishers</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Sylvain Guilley, Annelie Heuser, and Olivier Rioul</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2016-987" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=IMPLEMENTATION"><small class="badge category category-IMPLEMENTATION">Implementation</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2016-987" class="paper-abstract">The success rate is the classical metric for evaluating the
+performance of side-channel attacks. It is generally computed empirically from measurements for a particular device or using simulations. Closed-form expressions of success rate are desirable because they provide an explicit functional dependence on relevant parameters such as number of measurements and signal-to-noise ratio which help to understand the effectiveness of a given attack and how one can mitigate its threat by countermeasures. However, such closed-form expressions involve high-dimensional complex statistical functions that are hard to estimate.
+
+In this paper, we define the success exponent (SE) of an arbitrary side-channel distinguisher as the first-order exponent of the success rate as the number of measurements increases. Under fairly general assumptions such as soundness, we give a general simple formula for any arbitrary distinguisher and derive closed-form expressions of it for DoM, CPA, MIA and the optimal distinguisher when the model is known (template attack). For DoM and CPA our results are in line with the literature.
+
+Experiments confirm that the theoretical closed-form expression of the
+SE coincides with the empirically computed one, even for reasonably
+small numbers of measurements. Finally, we highlight that our study
+raises many new perspectives for comparing and evaluating side-channel
+attacks, countermeasures and implementations.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1106">2023/1106</a>
+      <a class="ms-2" href="/2023/1106.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">ProtoGalaxy:  Efficient ProtoStar-style folding of multiple instances</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Liam Eagen and Ariel Gabizon</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1106" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1106" class="paper-abstract">We continue the recent line of work on folding schemes. Building on ideas from  ProtoStar [BC23] we construct a folding scheme where the recursive verifier&#39;s ``marginal work&#39;&#39;, beyond linearly combining witness commitments, consists only of a logarithmic number of field operations and a constant number of hashes. Moreover, our folding scheme performs well when \emph{folding multiple instances at one step}, in which case the marginal number of verifier field operations per instance becomes constant, assuming constant degree gates.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/099">2023/099</a>
+      <a class="ms-2" href="/2023/099.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Scalable Multiparty Garbling</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Gabrielle Beck, Aarushi Goel, Aditya Hegde, Abhishek Jain, Zhengzhong Jin, and Gabriel Kaptchuk</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-099" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-099" class="paper-abstract">Multiparty garbling is the most popular approach for constant-round secure multiparty computation (MPC). Despite being the focus of significant research effort, instantiating prior approaches to multiparty garbling results in constant-round MPC that can not realistically accommodate large numbers of parties. In this work we present the first global-scale multiparty garbling protocol. The per-party communication complexity of our protocol decreases as the number of parties participating in the protocol increases --- for the first time matching the asymptotic communication complexity of non-constant round MPC protocols. Our protocol achieves malicious security in the honest-majority setting and relies on the hardness of the Learning Party with Noise assumption.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1314">2023/1314</a>
+      <a class="ms-2" href="/2023/1314.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Cryptanalysis of HALFLOOP Block Ciphers: Destroying HALFLOOP-24</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Gregor Leander, Shahram Rasoolzadeh, and Lukas Stennes</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1314" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=ATTACKS"><small class="badge category category-ATTACKS">Attacks and cryptanalysis</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1314" class="paper-abstract">HALFLOOP is a family of tweakable block ciphers that are used for encrypting automatic link establishment (ALE) messages in high-frequency radio, a technology commonly used by the military, other government agencies, and industries that require high robustness in long-distance communications. Recently, it was shown in [DDLS22] that the smallest version of the cipher, HALFLOOP-24, can be attacked within a practical time and memory complexity. However, in the real-word ALE setting, it turns out that this attack requires waiting more than 500 years to collect the necessary amount of plaintext-tweak-ciphertext pairs fulfilling the conditions of the attack.
+In this paper, we present real-world practical attacks against HALFLOOP-24 which are based on a probability-one differential distinguisher. In our attacks, we significantly reduce the data complexity to three differential pairs in the chosen-plaintext (CPA) setting which is optimal in the sense that even a brute force attack needs at least six plaintext-tweak-ciphertext pairs to uniquely identify the correct key. Considering the same ALE setting as [DDLS22], this translates to a reduction from 541 years to 2 hours worth of intercepted traffic.
+Besides, we provide the first, non generic, public cryptanalysis of HALFLOOP-48 and HALFLOOP-96. More precisely, we present Demirci-Selçuk meet-in-the-middle attacks against full-round HALFLOOP-48 and round-reduced HALFLOOP-96 to recover the complete master key in a CPA setting. However, unlike the attacks on HALFLOOP-24, our attacks on the larger versions are only theoretical. Moreover, for HALFLOOP-96 the known generic time-memory trade-off attack, based on a flawed tweak handling, remains the strongest attack vector.
+In conclusion, we iterate what was already stated in [DDLS22]: HALFLOOP does not provide adequate protection and should not be used.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1313">2023/1313</a>
+      <a class="ms-2" href="/2023/1313.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Hashing into quadratic residues modulo a safe prime composite</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Sietse Ringers</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1313" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1313" class="paper-abstract">For $n = pq$ a product of two safe primes, we construct and prove security of a cryptographic hash function $H$ mapping into the square residues $QR_n \subset (\mathbb{Z}/n\mathbb{Z})^*$, by squaring the output of an ordinary cryptographic hash function $H$ of sufficiently long output.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1312">2023/1312</a>
+      <a class="ms-2" href="/2023/1312.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Efficient Multiplicative-to-Additive Function from Joye-Libert Cryptosystem and Its Application to Threshold ECDSA</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Haiyang Xue, Man Ho Au, Mengling Liu, Kwan Yin Chan, Handong Cui, Xiang Xie, Tsz Hon Yuen, and Chengru Zhang</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1312" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1312" class="paper-abstract">Threshold ECDSA receives interest lately due to its widespread adoption in blockchain applications. A common building block of all leading constructions involves a secure conversion of multiplicative shares into additive ones, which is called the multiplicative-to-additive (MtA) function.  MtA dominates the overall complexity of all existing threshold ECDSA constructions. Specifically, $O(n^2)$ invocations of MtA are required in the case of $n$ active signers. Hence, improvement of MtA leads directly to significant improvements for all state-of-the-art threshold ECDSA schemes. 
+
+In this paper, we design a novel MtA by revisiting the Joye-Libert (JL) cryptosystem. Specifically, we revisit JL encryption and propose a JL-based commitment, then give efficient zero-knowledge proofs for JL cryptosystem which are the first to have standard soundness. Our new MtA offers the best time-space complexity trade-off among all existing  MtA constructions. It outperforms state-of-the-art constructions from Paillier by a factor of $1.85$ to $2$ in bandwidth and $1.2$ to $1.7$ in computation. It is $7\times$ faster than those based on Castagnos-Laguillaumie encryption only at the cost of $2\times$ more bandwidth. While our MtA is slower than OT-based constructions, it saves $18.7\times$ in bandwidth requirement. In addition, we also design a batch version of MtA to further reduce the amotised time and space cost by another $25$%.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1311">2023/1311</a>
+      <a class="ms-2" href="/2023/1311.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Are continuous stop-and-go mixnets provably secure?</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Debajyoti Das, Claudia Diaz, Aggelos Kiayias, and Thomas Zacharias</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1311" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1311" class="paper-abstract">This work formally analyzes the anonymity guarantees of continuous stop-and-go mixnets and attempts to answer the above question. Existing mixnet based anonymous communication protocols that aim to provide provable anonymity guarantees rely on round-based communication models --- which requires synchronization among all the nodes and clients, and difficult to achieve in practice. Continuous stop-and-go mixnets (e.g., Loopix and Nym) provide a nice alternative by adding a random delay for each message on every hop independent of all other hops and all other messages. The core anonymization technique of continuous mixnets combined with the fact that the messages are sent by the clients to the mixnet at different times makes it a difficult problem to formally prove security for such mixnet protocols; all existing analyses for such designs provide only experimental evaluations for anonymity.
+
+We are the first to close that gap and provide a formal analysis.
+We provide two indistinguishability based definitions (of sender anonymity), namely pairwise unlinkability and user unlinkability, tuned specifically for continuous stop-and-go mixnets. We derive the adversarial advantage as a function of the protocol parameters for the two definitions. We show that there is a fundamental lower bound on the adversarial advantage $\delta$ for pairwise unlinkability; however, strong user unlinkability (negligible adversarial advantage) can be achieved if the users message rate ($\lambda_u$) is proportional to message processing rate ($\lambda$) on the nodes.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/1310">2023/1310</a>
+      <a class="ms-2" href="/2023/1310.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">FHEDA: Efficient Circuit Synthesis with Reduced Bootstrapping for Torus FHE</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Animesh Singh, Smita Das, Anirban Chakraborty, Rajat Sadhukhan, Ayantika Chatterjee, and Debdeep Mukhopadhyay</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-1310" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-1310" class="paper-abstract">Fully Homomorphic Encryption (FHE) is a widely used cryptographic primitive for performing arbitrary computations on encrypted data. However, FHE incorporates a computationally intensive mechanism known as &#34;bootstrapping&#34;, that resets the noise in the ciphertext to a lower level allowing the computation on circuits of arbitrary depth. This process can take significant time, ranging from several minutes to hours. To address the above issue, in this work, we propose an Electronic Design Automation (EDA) framework FHEDA that generates efficient Boolean representations of circuits compatible with the Torus-FHE (ASIACRYPT 2020) scheme.
+To the best of our knowledge, this is the first work in the EDA domain of FHE. We integrate logic synthesis tricks and gate optimization techniques into our FHEDA framework for reducing the total number of bootstrapping operations in a Boolean circuit, which leads to a significant (up to 50%) reduction in homomorphic computation time. Our FHEDA is built upon the observation that in Torus-FHE at most one Boolean gate over fresh encryptions does not require bootstrapping. By integrating this observation with logic replacement techniques into FHEDA, we could reduce the total number of bootstrapping operations along with the circuit depth. This eventually reduces the homomorphic evaluation time of Boolean circuits. In order to verify the efficacy of our approach, we assess the performance of the proposed EDA flow on a diverse set of representative benchmarks including privacy-preserving machine learning and different symmetric key block ciphers.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/330">2023/330</a>
+      <a class="ms-2" href="/2023/330.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-03</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">Perfect MPC over Layered Graphs</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Bernardo David, Yuval Ishai, Anders Konring, Eyal Kushilevitz, and Varun Narayanan</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-330" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=PROTOCOLS"><small class="badge category category-PROTOCOLS">Cryptographic protocols</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-330" class="paper-abstract">The classical &#34;BGW protocol&#34; (Ben-Or, Goldwasser and Wigderson, STOC 1988) shows that secure multiparty computation (MPC) among $n$ parties can be realized with perfect full security if $t &lt; n/3$ parties are corrupted. This holds against malicious adversaries in the &#34;standard&#34; model for MPC, where a fixed set of $n$ parties is involved in the full execution of the protocol. 
+However, the picture is less clear in the mobile adversary setting of Ostrovsky and Yung (PODC 1991), where the adversary may periodically &#34;move&#34; by uncorrupting parties and corrupting a new set of $t$ parties. In this setting, it is unclear if full security can be achieved against an adversary that is maximally mobile, i.e., moves after every round. The question is further motivated by 
+the &#34;You Only Speak Once&#34; (YOSO) setting of Gentry et al. (Crypto 2021), where not only the adversary is mobile but also each round is executed by a disjoint set of parties. Previous positive results in this model do not achieve perfect security, and either assume probabilistic corruption and a nonstandard communication model, or only realize the weaker goal of security-with-abort. The question of matching the BGW result in these settings remained open.
+
+In this work, we tackle the above two challenges simultaneously. We consider a layered MPC model, a simplified variant of the fluid MPC model of Choudhuri et al. (Crypto 2021). Layered MPC is an instance of standard MPC where the interaction pattern is defined by a layered graph of width $n$, allowing each party to send secret messages and broadcast messages only to parties in the next layer. We require perfect security against a malicious adversary who may corrupt at most $t$ parties in each layer. 
+Our main result is a perfect, fully secure layered MPC protocol with an optimal corruption threshold of $t &lt; n/3$, thus extending the BGW feasibility result to the layered setting. This implies perfectly secure MPC protocols against a maximally mobile adversary.</div>
+    </div>
+  </div>
+  
+  <div class="d-flex mb-1">
+    <div class="flex-grow-1"><a href="/2023/576">2023/576</a>
+      <a class="ms-2" href="/2023/576.pdf">(PDF)</a>
+      
+    </div>
+    <div><small>Last updated:&nbsp; 2023-09-02</small></div>
+  </div>
+  <div class="ms-3 ms-md-5 mb-3">
+    <div class="d-flex justify-content-between">
+      <div class="papertitle">IGD-ScoreChain: A Lightweight and Scalable Blockchain Based on Node Sharding for the Internet of Things</div>
+      <div class="ms-3 d-none d-md-block">
+        
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div class="summaryauthors">Elnaz Mehraein, Zahra Ahmadian, and Reza Nourmohammadi</div>
+    <div class="d-flex justify-content-between align-items-start">
+      
+      <div>
+        <a class="abstract-closed" data-target="abstract-2023-576" onclick="toggleAbstract(this)">Show abstract</a>
+      </div>
+      
+      <div class="d-block d-md-none">
+      
+        <a href="/search?category=APPLICATIONS"><small class="badge category category-APPLICATIONS">Applications</small></a>
+        
+      </div>
+    </div>
+    <div>
+      
+      <div id="abstract-2023-576" class="paper-abstract">Due to the significant development of the intelligence industry worldwide, various initiatives have increasingly recognized the value of the Internet of Things (IoT). IoT systems, however, are often hin- dered by fundamental challenges, such as the need for a central server to manage them. Decentralizing these systems can be achieved through the use of blockchains. Recently, there has been an increase in the popularity of blockchain in various fields, such as banking, IoT, and the intelligence industry, and human societies have taken notice of it. One of the main problems is with the scalability of such systems as the network size grows.
+This paper examines how to overcome this challenge in blockchain-based IoT systems. We introduce a sharding-based blockchain that is lightweight and scalable. In the proposed method, the nodes are assigned to a number of shards based on their history of activity. As part of this study, the Improved Byzantine Fault Tolerance with Graceful performance Degradation (IGDBFT) consensus algorithm is introduced within the proposed scheme for intra-shard consensus. A solution to storing blocks and cross-shard transactions has been developed using a global chain containing parent blocks in the cloud layer. Finally, we analyze the security and efficiency of our scheme and compare our sharding-based protocol with previous protocols.</div>
+    </div>
+  </div>
+  
+</div>
+
+
+ 
+</main>
+<div class="container-fluid mt-auto" id="eprintFooter">
+  <a href="https://iacr.org/">
+    <img id="iacrlogo" src="/img/iacrlogo_small.png" class="img-fluid d-block mx-auto" alt="IACR Logo">
+  </a>
+  <div class="colorDiv"></div>
+  <div class="alert alert-success w-75 mx-auto">
+    Note: In order to protect the privacy of readers, eprint.iacr.org
+    does not use cookies or embedded third party content.
+  </div>
+</div>
+<script src="/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+   var topNavbar = document.getElementById('topNavbar');
+   if (topNavbar) {
+     document.addEventListener('scroll', function(e) {
+       if (window.scrollY > 100) {
+         topNavbar.classList.add('scrolled');
+       } else {
+         topNavbar.classList.remove('scrolled');
+       }
+     })
+   }
+  </script>
+
+
+</body>
+</html>

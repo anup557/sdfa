@@ -1,0 +1,74 @@
+here keyspace size: 0.0 means, reduced keyspace size: 2^0 i.e. 1
+
+
+For 4th round attack (using rotating key schedule):
+****************************************************************************************************
+number of faults: 9
+
+hola. keyspace size:  9.807354922057604
+hola. keyspace size:  7.0
+hola. keyspace size:  1.0
+hola. keyspace size:  7.0
+hola. keyspace size:  6.0
+hola. keyspace size:  6.0
+hola. keyspace size:  3.0
+hola. keyspace size:  5.0
+hola. keyspace size:  5.0
+hola. keyspace size:  3.584962500721156
+
+avg reduced keyspace size:  5.339231742277876
+
+
+For 4th round attack (using rotating key schedule):
+****************************************************************************************************
+number of faults: 10
+
+hola. keyspace size:  2.0
+hola. keyspace size:  2.0
+hola. keyspace size:  5.0
+hola. keyspace size:  1.0
+hola. keyspace size:  3.0
+hola. keyspace size:  0.0
+hola. keyspace size:  1.0
+hola. keyspace size:  2.0
+hola. keyspace size:  0.0
+hola. keyspace size:  5.0
+
+avg reduced keyspace size:  2.1
+
+
+For 4th round attack (using rotating key schedule):
+****************************************************************************************************
+number of faults: 11
+
+hola. keyspace size:  2.0
+hola. keyspace size:  1.0
+hola. keyspace size:  1.584962500721156
+hola. keyspace size:  0.0
+hola. keyspace size:  1.0
+hola. keyspace size:  1.0
+hola. keyspace size:  0.0
+hola. keyspace size:  1.0
+hola. keyspace size:  0.0
+hola. keyspace size:  2.0
+
+avg reduced keyspace size:  0.9584962500721156
+
+
+For 4th round attack (using rotating key schedule):
+****************************************************************************************************
+number of faults: 12
+
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  1.0
+hola. keyspace size:  0.0
+
+avg reduced keyspace size:  0.1
+

@@ -1,0 +1,36 @@
+For 5th round attack (using rotating key schedule):
+****************************************************************************************************
+number of faults: 4
+
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  1.0
+hola. keyspace size:  0.0
+hola. keyspace size:  7.383704292474052
+hola. keyspace size:  1.0
+hola. keyspace size:  2.321928094887362
+hola. keyspace size:  0.0
+hola. keyspace size:  1.0
+hola. keyspace size:  3.0
+
+avg reduced keyspace size:  1.5705632387361415
+
+
+
+For 5th round attack (using rotating key schedule):
+****************************************************************************************************
+number of faults: 5
+
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+hola. keyspace size:  0.0
+
+avg reduced keyspace size:  0.0
+

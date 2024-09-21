@@ -1,0 +1,9 @@
+if __name__=='__main__':
+    sbox = [0x0, 0x3, 0x7, 0xE, 0xD, 0x4, 0xA, 0x9, 0xC, 0xF, 0x1, 0x8, 0xB, 0x2, 0x6, 0x5]
+    inv_sbox = [0 for i in range(16)]
+    for i in range(16):
+        inv_sbox[sbox[i]] = i
+
+    print('inv sbox:')
+    for i in range(16):
+        print(hex(inv_sbox[i]), end=', ')
